@@ -21,7 +21,7 @@ class CreateSongsTable extends Migration
           $table->string('artwork');
           $table->string('video');
           $table->timestamps();
-        })
+        });
     }
 
     /**
