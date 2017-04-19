@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Song;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Http\Request;
 
 class SongController extends Controller
 {
@@ -23,7 +23,7 @@ class SongController extends Controller
     public function update (Request $request, $id)
     {
       $song = Song::find($id);
-      $song->update($request-all());
+      $song->update($request->all());
       return Response::json(['updated' => true]);
     }
 
