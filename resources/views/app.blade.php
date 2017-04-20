@@ -8,11 +8,13 @@
         <title>AudioBook</title>
 
         <!-- Fonts -->
-
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans" rel="stylesheet">
 
         <!-- Styles -->
         <style>
-
+        body {
+          font-family: 'Open Sans', sans-serif;
+        }
         </style>
     </head>
     <body>

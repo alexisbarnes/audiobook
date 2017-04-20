@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 
-//api routes
+// api routes
 Route::get('/songs', 'SongController@index');
 Route::post('/songs', 'SongController@create');
 Route::get('/songs/{id}', 'SongController@show');
