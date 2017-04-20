@@ -12426,6 +12426,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Navigation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Navigation__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FootNav__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FootNav___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__FootNav__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__AllSongs__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__AllSongs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__AllSongs__);
 //
 //
 //
@@ -12438,6 +12440,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -12446,7 +12457,34 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     Navigation: __WEBPACK_IMPORTED_MODULE_1__Navigation___default.a,
-    FootNav: __WEBPACK_IMPORTED_MODULE_2__FootNav___default.a
+    FootNav: __WEBPACK_IMPORTED_MODULE_2__FootNav___default.a,
+    AllSongs: __WEBPACK_IMPORTED_MODULE_3__AllSongs___default.a
+  },
+
+  data: function data() {
+    return {
+      songs: []
+    };
+  },
+  mounted: function mounted() {
+    this.fetch();
+  },
+
+
+  methods: {
+    fetch: function fetch() {
+      var _this = this;
+
+      console.log('App -> fetch');
+      __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/songs').then(function (response) {
+        console.log('App -> fetch success');
+        console.log(response.data);
+        _this.songs = response.data;
+      }).catch(function (response) {
+        console.log('App -> fetch error');
+        //show error
+      });
+    }
   }
 });
 
@@ -32196,6 +32234,32 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "container-fluid"
   }, [_c('Navigation')], 1), _vm._v(" "), _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "col-md-12"
+  }, [_c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.songs.length > 0),
+      expression: "songs.length > 0"
+    }],
+    staticClass: "SongsList"
+  }, _vm._l((_vm.songs), function(song, index) {
+    return _c('AllSongs', {
+      key: index,
+      attrs: {
+        "song": song
+      }
+    })
+  })), _vm._v(" "), _c('p', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.songs.length === 0),
+      expression: "songs.length === 0"
+    }]
+  }, [_vm._v("There is no music in the database.")])])]), _vm._v(" "), _c('div', {
     staticClass: "container-fluid"
   }, [_c('FootNav')], 1)])
 },staticRenderFns: []}
@@ -41780,6 +41844,148 @@ module.exports = function(module) {
 __webpack_require__(14);
 module.exports = __webpack_require__(15);
 
+
+/***/ }),
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'AllSongs',
+
+  mounted: function mounted() {
+    console.log('AllSongs -> mounted');
+  },
+
+
+  props: ['song'],
+
+  data: function data() {
+    return {
+      title: this.song.title,
+      artist: this.song.artist,
+      album: this.song.album,
+      artwork: this.song.artwork,
+      video: this.song.video
+    };
+  }
+});
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)();
+exports.push([module.i, "\n.albumWork[data-v-6b45fe78] {\n  height: 340px;\n  width: auto;\n}\n\n", ""]);
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(66)
+
+var Component = __webpack_require__(5)(
+  /* script */
+  __webpack_require__(62),
+  /* template */
+  __webpack_require__(65),
+  /* scopeId */
+  "data-v-6b45fe78",
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/alexisbarnes/Desktop/583/audiobook/resources/assets/js/components/AllSongs.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] AllSongs.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6b45fe78", Component.options)
+  } else {
+    hotAPI.reload("data-v-6b45fe78", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-4"
+  }, [_c('div', {
+    staticClass: "Song"
+  }, [_c('img', {
+    staticClass: "albumWork",
+    attrs: {
+      "src": _vm.song.artwork
+    }
+  })])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-6b45fe78", module.exports)
+  }
+}
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(63);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(6)("049ad58e", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6b45fe78&scoped=true!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllSongs.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6b45fe78&scoped=true!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllSongs.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);
