@@ -12512,7 +12512,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 
@@ -14972,14 +14971,14 @@ exports.push([module.i, "\nbody {\n  background-color: #F9F9F9;\n  font-family: 
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\np[data-v-70e24c3e] {\n  font-family: 'Open Sans', sans-serif;\n  color: #000;\n  text-align: center;\n}\na[data-v-70e24c3e] {\n  text-decoration: underline;\n  color: #000;\n}\na[data-v-70e24c3e]:hover {\n  color: #A6130F;\n  cursor: pointer;\n}\n", ""]);
 
 /***/ }),
 /* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*BOOTSTRAP NAVBAR*/\n.navbar-default[data-v-725fbebb] {\n  background-color: transparent;\n  border-color: transparent;\n}\nli[data-v-725fbebb] {\n  font-family: 'Abril Fatface', cursive;\n  font-size: 30px;\n}\n.navbar-default .navbar-nav > li > a[data-v-725fbebb] {\n    color: #000;\n}\n.navbar-nav > li[data-v-725fbebb] {\n    margin-top: 30px;\n}\n\n/*ACTIVE & HOVER A*/\n.navbar-default .navbar-nav > .active > a[data-v-725fbebb], .navbar-default .navbar-nav > .active > a[data-v-725fbebb]:hover, .navbar-default .navbar-nav > .active > a[data-v-725fbebb]:focus {\n    background-color: transparent;\n    color: #A6130F;\n}\n.navbar-default .navbar-nav > li > a[data-v-725fbebb]:hover {\n    color: #A6130F;\n}\n\n/*LOGO*/\n.main-logo[data-v-725fbebb] {\n  width: auto;\n  height: 80px;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*BOOTSTRAP NAVBAR*/\n.navbar-default[data-v-725fbebb] {\n  background-color: transparent;\n  border-color: transparent;\n}\nli[data-v-725fbebb] {\n  font-family: 'Abril Fatface', cursive;\n  font-size: 30px;\n}\n.navbar-default .navbar-nav > li > a[data-v-725fbebb] {\n    color: #000;\n}\n.navbar-nav > li[data-v-725fbebb] {\n    margin-top: 30px;\n}\n\n/*ACTIVE & HOVER A*/\n.navbar-default .navbar-nav > .active > a[data-v-725fbebb], .navbar-default .navbar-nav > .active > a[data-v-725fbebb]:hover, .navbar-default .navbar-nav > .active > a[data-v-725fbebb]:focus {\n    background-color: transparent;\n    color: #A6130F;\n}\n.navbar-default .navbar-nav > li > a[data-v-725fbebb]:hover {\n    color: #A6130F;\n}\n\n/*LOGO*/\n.main-logo[data-v-725fbebb] {\n  width: auto;\n  height: 80px;\n}\n", ""]);
 
 /***/ }),
 /* 41 */
@@ -32217,7 +32216,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "container-fluid"
-  }, [_c('h1', [_vm._v("On the page...")])])
+  }, [_c('p', [_vm._v("© "), _c('a', [_vm._v("Alexis Barnes")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -32286,10 +32285,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "href": "#"
     }
   }, [_vm._v("github")])]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("portfolio")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "#"
     }
