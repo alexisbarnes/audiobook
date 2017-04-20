@@ -1,9 +1,11 @@
 <template>
   <div class="App">
+    <!--PAGE NAVIGATION-->
     <div class="container-fluid">
       <Navigation></Navigation>
     </div>
 
+    <!--DISPLAY OF ALL SONGS-->
     <div class="container">
       <div class="col-md-12">
         <div class="SongsList" v-show="songs.length > 0">
@@ -12,6 +14,8 @@
         <p v-show="songs.length === 0">There is no music in the database.</p>
       </div>
     </div>
+    
+    <!--FOOTER-->
     <div class="container-fluid">
       <FootNav></FootNav>
     </div>

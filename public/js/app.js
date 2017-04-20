@@ -12448,6 +12448,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -41869,6 +41873,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -41897,7 +41909,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)();
-exports.push([module.i, "\n.albumWork[data-v-6b45fe78] {\n  height: 340px;\n  width: auto;\n}\n\n", ""]);
+exports.push([module.i, "\nbody[data-v-6b45fe78] {\n  font-family: 'Open Sans', sans-serif;\n  color: #000;\n}\n.songInfo[data-v-6b45fe78] {\n  height: 340px;\n  width: auto;\n  background-size: 340px auto;\n}\n.opacity[data-v-6b45fe78] {\n  height: 340px;\n  width: auto;\n  background-size: 340px auto;\n  background-color: rgba(204, 204, 204, 0.6);\n}\n.info[data-v-6b45fe78] {\n  color: #000;\n  font-size: 30px;\n  display: inline-block;\n}\n.text[data-v-6b45fe78] {\n  color: #000;\n  font-size: 30px;\n  display: inline-block;\n}\n.songFormat[data-v-6b45fe78] {\n  margin: 10px;\n}\n\n", ""]);
 
 /***/ }),
 /* 64 */
@@ -41946,12 +41958,28 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "col-md-4"
   }, [_c('div', {
     staticClass: "Song"
-  }, [_c('img', {
-    staticClass: "albumWork",
-    attrs: {
-      "src": _vm.song.artwork
-    }
-  })])])
+  }, [_c('div', {
+    staticClass: "songInfo",
+    style: ({
+      'background-image': 'url(' + _vm.song.artwork + ')'
+    })
+  }, [_c('div', {
+    staticClass: "opacity"
+  }, [_c('div', {
+    staticClass: "songFormat"
+  }, [_c('span', {
+    staticClass: "info"
+  }, [_vm._v("title:")]), _c('p', {
+    staticClass: "text"
+  }, [_vm._v(" " + _vm._s(_vm.song.title) + " ")]), _c('br'), _vm._v(" "), _c('span', {
+    staticClass: "info"
+  }, [_vm._v("artist:")]), _c('p', {
+    staticClass: "text"
+  }, [_vm._v(" " + _vm._s(_vm.song.artist) + " ")]), _c('br'), _vm._v(" "), _c('span', {
+    staticClass: "info"
+  }, [_vm._v("album:")]), _c('p', {
+    staticClass: "text"
+  }, [_vm._v(" " + _vm._s(_vm.song.album))])])])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
