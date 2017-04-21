@@ -32559,7 +32559,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "sr-only"
   }, [_vm._v("(current)")])])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
-      "href": "#"
+      "href": "https://www.github.com/alexisbarnes",
+      "target": "_blank"
     }
   }, [_vm._v("github")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {

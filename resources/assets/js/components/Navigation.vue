@@ -16,7 +16,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">home <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">github</a></li>
+        <li><a href="https://www.github.com/alexisbarnes" target="_blank">github</a></li>
         <li><a href="#">style guide</a></li>
         <li><a href="#">documentation</a></li>
         <li><a href="#">credits</a></li>
