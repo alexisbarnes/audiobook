@@ -1,6 +1,8 @@
 <template>
   <div class="container-fluid">
-    <p>&copy; <a>Alexis Barnes</a></p>
+    <div class="footer">
+      <p>&copy; <a>Alexis Barnes</a></p>
+    </div>
   </div>
 
 </template>
@@ -19,6 +21,10 @@ export default {
 </script>
 
 <style scoped>
+.footer {
+  margin: 20px;
+}
+
 p {
   font-family: 'Open Sans', sans-serif;
   color: #000;

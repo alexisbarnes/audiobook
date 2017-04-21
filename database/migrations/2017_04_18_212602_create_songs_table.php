@@ -18,6 +18,7 @@ class CreateSongsTable extends Migration
           $table->string('title');
           $table->string('artist');
           $table->string('album');
+          $table->string('genre');
           $table->string('artwork');
           $table->string('video');
           $table->timestamps();
