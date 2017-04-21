@@ -8,10 +8,10 @@
     <!--DISPLAY OF ALL SONGS-->
     <div class="container">
       <div class="row">
-        <div class="col-lg-2 add">
-          <button type="button" class="btn btn-primary" @click="createForm">Add Song</button>
+        <div class="col-md-2 col-lg-2 add">
+          <button type="button" class="btn btn-primary">Add Song</button>
         </div>
-        <div class="col-lg-4 search">
+        <div class="col-md-4 col-lg-4 search">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search for...">
             <span class="input-group-btn">
@@ -22,18 +22,16 @@
       </div>
 
       <div class="row">
-        <div class="col-md-12 col-lg-12">
-          <div v-if="showForm">
-            <SongForm></SongForm>
-          </div>
-          <div v-else>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
             <div class="SongsList" v-show="songs.length > 0">
               <AllSongs v-for="(song, index) in songs" :key="index" :song="song"></AllSongs>
             </div>
             <p v-show="songs.length === 0">There is no music in the database.</p>
             <!-- <SongForm></SongForm> -->
-          </div>
         </div>
+
+        <!-- <SongInfo></SongInfo> -->
       </div>
     </div>
 
@@ -50,19 +48,20 @@
   import FootNav from './FootNav';
   import AllSongs from './AllSongs';
   import SongForm from './SongForm';
+  import SongInfo from './SongInfo';
 
   export default {
     components: {
       Navigation,
       FootNav,
       AllSongs,
-      SongForm
+      SongForm,
+      SongInfo
     },
 
     data () {
       return {
-        songs: [],
-        showForm: false
+        songs: []
       }
     },
 
@@ -82,10 +81,7 @@
           .catch((response) => {
             console.log('App -> fetch error');
             //show error
-          })
-      },
-      createForm () {
-        this.showForm = true
+          });
       }
     }
   }

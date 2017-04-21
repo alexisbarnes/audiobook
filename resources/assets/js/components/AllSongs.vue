@@ -1,5 +1,5 @@
 <template>
-    <div class="col-md-4">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
       <div class="Song">
         <div class="songInfo" :style="{'background-image': 'url(' + song.artwork + ')'}">
           <div class="opacity">
@@ -80,6 +80,25 @@ body {
 
 .songFormat {
   margin: 10px;
+}
+
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 1199px) {
+  .songInfo {
+    background-size: 283px auto;
+  }
+  .opacity {
+    height: 283px;
+    width: 283px;
+  }
+
+  .infoTitle {
+    font-size: 18px;
+  }
+
+  .info {
+    font-size: 18px;
+  }
 }
 
 </style>
