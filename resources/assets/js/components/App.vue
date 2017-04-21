@@ -26,6 +26,7 @@
             <AllSongs v-for="(song, index) in songs" :key="index" :song="song"></AllSongs>
           </div>
           <p v-show="songs.length === 0">There is no music in the database.</p>
+          <SongForm></SongForm>
         </div>
       </div>
     </div>
@@ -42,12 +43,14 @@
   import Navigation from './Navigation';
   import FootNav from './FootNav';
   import AllSongs from './AllSongs';
+  import SongForm from './SongForm';
 
   export default {
     components: {
       Navigation,
       FootNav,
-      AllSongs
+      AllSongs,
+      SongForm
     },
 
     data () {

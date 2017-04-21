@@ -12478,6 +12478,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FootNav___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__FootNav__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__AllSongs__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__AllSongs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__AllSongs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__SongForm__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__SongForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__SongForm__);
 //
 //
 //
@@ -12517,6 +12519,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+
 
 
 
@@ -12527,7 +12531,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   components: {
     Navigation: __WEBPACK_IMPORTED_MODULE_1__Navigation___default.a,
     FootNav: __WEBPACK_IMPORTED_MODULE_2__FootNav___default.a,
-    AllSongs: __WEBPACK_IMPORTED_MODULE_3__AllSongs___default.a
+    AllSongs: __WEBPACK_IMPORTED_MODULE_3__AllSongs___default.a,
+    SongForm: __WEBPACK_IMPORTED_MODULE_4__SongForm___default.a
   },
 
   data: function data() {
@@ -32377,7 +32382,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.songs.length === 0),
       expression: "songs.length === 0"
     }]
-  }, [_vm._v("There is no music in the database.")])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("There is no music in the database.")]), _vm._v(" "), _c('SongForm')], 1)])]), _vm._v(" "), _c('div', {
     staticClass: "container-fluid"
   }, [_c('FootNav')], 1)])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -42064,6 +42069,256 @@ module.exports = function(module) {
 __webpack_require__(14);
 module.exports = __webpack_require__(15);
 
+
+/***/ }),
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(73)
+
+var Component = __webpack_require__(3)(
+  /* script */
+  __webpack_require__(69),
+  /* template */
+  __webpack_require__(68),
+  /* scopeId */
+  "data-v-35bb1560",
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/alexisbarnes/Desktop/583/audiobook/resources/assets/js/components/SongForm.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] SongForm.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-35bb1560", Component.options)
+  } else {
+    hotAPI.reload("data-v-35bb1560", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "SongForm"
+  }, [_c('div', {
+    staticClass: "col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 background"
+  }, [_c('div', {
+    staticClass: "col-md-12"
+  }, [_c('a', {
+    staticClass: "back",
+    attrs: {
+      "href": "#"
+    }
+  }, [_c('img', {
+    attrs: {
+      "src": "/images/back-arrow.png"
+    }
+  }), _c('span', {
+    staticClass: "backTxt"
+  }, [_vm._v("back")])]), _vm._v(" "), _c('h1', {
+    staticClass: "formTitle"
+  }, [_vm._v("add new song")])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-12"
+  }, [_c('div', {
+    staticClass: "col-md-6"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "song title"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "artist"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "album"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('select', {
+    staticClass: "form-control"
+  }, [_c('option', [_vm._v("1")]), _vm._v(" "), _c('option', [_vm._v("2")]), _vm._v(" "), _c('option', [_vm._v("3")]), _vm._v(" "), _c('option', [_vm._v("4")]), _vm._v(" "), _c('option', [_vm._v("5")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-12"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "link to cover art..."
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-12"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "link to media..."
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-12"
+  }, [_c('button', {
+    staticClass: "btn btn-primary pull-right create"
+  }, [_vm._v("create")])])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-35bb1560", module.exports)
+  }
+}
+
+/***/ }),
+/* 69 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'SongForm',
+
+  mounted: function mounted() {
+    console.log('SongForm -> mounted');
+  }
+});
+
+/***/ }),
+/* 70 */,
+/* 71 */,
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)();
+exports.push([module.i, "\nbody[data-v-35bb1560] {\n  font-family: 'Open Sans', sans-serif;\n}\n.background[data-v-35bb1560] {\n  background-color: #F4EDE6;\n  border-radius: 25px;\n  height: 575px;\n  margin: 20px;\n}\n.formTitle[data-v-35bb1560] {\n  font-family: 'Abril Fatface', cursive;\n  font-size: 50px;\n  text-align: center;\n  color: #000;\n}\n.back[data-v-35bb1560] {\n  display: inline-block;\n  float: right;\n  margin-top: 37px;\n}\na[data-v-35bb1560] {\n  color: #000 !important;\n  font-size: 20px;\n}\na[data-v-35bb1560]:hover {\n  color: #A6130F !important;\n  text-decoration: none\n}\n.back img[data-v-35bb1560] {\n  height: 28px;\n  width: auto;\n}\n.backTxt[data-v-35bb1560] {\n  margin: 5px;\n}\n\n/*INPUT FORM*/\n.form-group[data-v-35bb1560] {\n  margin: 24px;\n}\n.form-control[data-v-35bb1560]:focus {\n  border-color: #000;\n}\ninput[data-v-35bb1560]::-webkit-input-placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\ninput[data-v-35bb1560]:-ms-input-placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\ninput[data-v-35bb1560]::placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\n\n/*BTN STYLES*/\n.create[data-v-35bb1560] {\n  margin-right: 25px;\n  font-size: 40px;\n  padding: 3px 58px;\n  border-radius: 9px;\n}\n\n\n", ""]);
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(72);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(4)("20319fb6", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-35bb1560&scoped=true!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SongForm.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-35bb1560&scoped=true!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SongForm.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);
