@@ -54,6 +54,7 @@ body {
   width: auto;
   background-size: 340px auto;
   background-repeat: no-repeat;
+  /*opacity: 0.6;*/
 }
 
 .opacity {

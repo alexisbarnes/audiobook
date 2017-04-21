@@ -8,6 +8,9 @@
     <!--DISPLAY OF ALL SONGS-->
     <div class="container">
       <div class="row">
+        <div class="col-lg-2 add">
+          <button type="button" class="btn btn-primary">Add Song</button>
+        </div>
         <div class="col-lg-4 search">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search for...">
@@ -86,5 +89,14 @@ body {
 .search {
   margin: 14px;
   float: right !important;
+}
+
+.add {
+  margin: 14px;
+}
+
+.btn-primary {
+  background-color: #6D8C77 !important;
+  border-color: #6D8C77 !important;
 }
 </style>
