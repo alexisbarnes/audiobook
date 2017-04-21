@@ -12520,6 +12520,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -12537,7 +12543,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   data: function data() {
     return {
-      songs: []
+      songs: [],
+      showForm: false
     };
   },
   mounted: function mounted() {
@@ -12558,6 +12565,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         console.log('App -> fetch error');
         //show error
       });
+    },
+    createForm: function createForm() {
+      this.showForm = true;
     }
   }
 });
@@ -12631,6 +12641,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Navigation',
+
   mounted: function mounted() {
     console.log('Navigation -> mounted');
   }
@@ -15099,7 +15110,7 @@ exports.push([module.i, "\n.footer[data-v-70e24c3e] {\n  margin: 20px;\n}\np[dat
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*BOOTSTRAP NAVBAR*/\n.navbar-default[data-v-725fbebb] {\n  background-color: transparent;\n  border-color: transparent;\n}\nli[data-v-725fbebb] {\n  font-family: 'Abril Fatface', cursive;\n  font-size: 30px;\n}\n.navbar-default .navbar-nav > li > a[data-v-725fbebb] {\n    color: #000;\n}\n.navbar-nav > li[data-v-725fbebb] {\n    margin-top: 30px;\n}\n\n/*ACTIVE & HOVER A*/\n.navbar-default .navbar-nav > .active > a[data-v-725fbebb], .navbar-default .navbar-nav > .active > a[data-v-725fbebb]:hover, .navbar-default .navbar-nav > .active > a[data-v-725fbebb]:focus {\n    background-color: transparent;\n    color: #A6130F;\n}\n.navbar-default .navbar-nav > li > a[data-v-725fbebb]:hover {\n    color: #A6130F;\n}\n\n/*LOGO*/\n.main-logo[data-v-725fbebb] {\n  width: auto;\n  height: 80px;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*BOOTSTRAP NAVBAR*/\n.navbar-default[data-v-725fbebb] {\n  background-color: transparent;\n  border-color: transparent;\n}\nli[data-v-725fbebb] {\n  font-family: 'Abril Fatface', cursive;\n  font-size: 30px;\n}\n.navbar-default .navbar-nav > li > a[data-v-725fbebb] {\n    color: #000;\n}\n.navbar-nav > li[data-v-725fbebb] {\n    margin-top: 30px;\n}\n\n/*ACTIVE & HOVER A*/\n.navbar-default .navbar-nav > .active > a[data-v-725fbebb], .navbar-default .navbar-nav > .active > a[data-v-725fbebb]:hover, .navbar-default .navbar-nav > .active > a[data-v-725fbebb]:focus {\n    background-color: transparent;\n    color: #A6130F;\n}\n.navbar-default .navbar-nav > li > a[data-v-725fbebb]:hover {\n    color: #A6130F;\n}\n\n/*LOGO*/\n.main-logo[data-v-725fbebb] {\n  width: auto;\n  height: 80px;\n}\n", ""]);
 
 /***/ }),
 /* 43 */
@@ -32356,11 +32367,23 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container-fluid"
   }, [_c('Navigation')], 1), _vm._v(" "), _c('div', {
     staticClass: "container"
-  }, [_vm._m(0), _vm._v(" "), _c('div', {
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-lg-2 add"
+  }, [_c('button', {
+    staticClass: "btn btn-primary",
+    attrs: {
+      "type": "button"
+    },
+    on: {
+      "click": _vm.createForm
+    }
+  }, [_vm._v("Add Song")])]), _vm._v(" "), _vm._m(0)]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('div', {
     staticClass: "col-md-12 col-lg-12"
-  }, [_c('div', {
+  }, [(_vm.showForm) ? _c('div', [_c('SongForm')], 1) : _c('div', [_c('div', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -32382,20 +32405,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.songs.length === 0),
       expression: "songs.length === 0"
     }]
-  }, [_vm._v("There is no music in the database.")]), _vm._v(" "), _c('SongForm')], 1)])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("There is no music in the database.")])])])])]), _vm._v(" "), _c('div', {
     staticClass: "container-fluid"
   }, [_c('FootNav')], 1)])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-lg-2 add"
-  }, [_c('button', {
-    staticClass: "btn btn-primary",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Add Song")])]), _vm._v(" "), _c('div', {
     staticClass: "col-lg-4 search"
   }, [_c('div', {
     staticClass: "input-group"
@@ -32414,7 +32428,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('i', {
     staticClass: "glyphicon glyphicon-search"
-  })])])])])])
+  })])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {

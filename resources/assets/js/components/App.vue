@@ -9,7 +9,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-2 add">
-          <button type="button" class="btn btn-primary">Add Song</button>
+          <button type="button" class="btn btn-primary" @click="createForm">Add Song</button>
         </div>
         <div class="col-lg-4 search">
           <div class="input-group">
@@ -18,15 +18,21 @@
               <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
             </span>
           </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
+        </div><!-- /.col-lg-4 -->
       </div>
+
       <div class="row">
         <div class="col-md-12 col-lg-12">
-          <div class="SongsList" v-show="songs.length > 0">
-            <AllSongs v-for="(song, index) in songs" :key="index" :song="song"></AllSongs>
+          <div v-if="showForm">
+            <SongForm></SongForm>
           </div>
-          <p v-show="songs.length === 0">There is no music in the database.</p>
-          <SongForm></SongForm>
+          <div v-else>
+            <div class="SongsList" v-show="songs.length > 0">
+              <AllSongs v-for="(song, index) in songs" :key="index" :song="song"></AllSongs>
+            </div>
+            <p v-show="songs.length === 0">There is no music in the database.</p>
+            <!-- <SongForm></SongForm> -->
+          </div>
         </div>
       </div>
     </div>
@@ -55,7 +61,8 @@
 
     data () {
       return {
-        songs: []
+        songs: [],
+        showForm: false
       }
     },
 
@@ -76,6 +83,9 @@
             console.log('App -> fetch error');
             //show error
           })
+      },
+      createForm () {
+        this.showForm = true
       }
     }
   }

@@ -32,6 +32,7 @@ import axois from 'axios';
 
 export default {
   name: 'Navigation',
+
   mounted () {
     console.log('Navigation -> mounted')
   }
