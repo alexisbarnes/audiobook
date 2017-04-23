@@ -18,7 +18,7 @@
         <li class="active"><a href="#">home <span class="sr-only">(current)</span></a></li>
         <li><a href="https://www.github.com/alexisbarnes" target="_blank">github</a></li>
         <li><a href="#">style guide</a></li>
-        <li><a href="#">documentation</a></li>
+        <li><a href="https://alexisbarnes.gitbooks.io/audiobook/">documentation</a></li>
         <li><a href="#">credits</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
