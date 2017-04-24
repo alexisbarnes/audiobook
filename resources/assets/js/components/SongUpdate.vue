@@ -4,23 +4,23 @@
       <!---TITLE-->
       <div class="col-md-12">
         <a href="#" class="back"><img src="/images/back-arrow.png" /><span class="backTxt">back</span></a>
-        <h1 class="formTitle">add new song</h1>
+        <h1 class="formTitle">update song</h1>
       </div>
       <!---FORM-->
       <div class="col-md-12">
         <div class="col-md-6">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="song title" />
+            <input class="form-control" type="text" placeholder="" />
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="artist" />
+            <input class="form-control" type="text" placeholder="" />
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="album" />
+            <input class="form-control" type="text" placeholder="" />
           </div>
         </div>
         <div class="col-md-6">
@@ -63,16 +63,16 @@
         </div>
         <div class="col-md-12">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="link to cover art..." />
+            <input class="form-control" type="text" placeholder="" />
           </div>
         </div>
         <div class="col-md-12">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="youtube id..." />
+            <input class="form-control" type="text" placeholder="" />
           </div>
         </div>
         <div class="col-md-12">
-          <button class="btn btn-primary pull-right create">create</button>
+          <button class="btn btn-primary pull-right create">update</button>
         </div>
       </div>
     </div>
@@ -82,10 +82,10 @@
 <script>
 import axios from 'axios';
 export default {
-  name: 'SongForm',
+  name: 'SongUpdate',
 
   mounted () {
-    console.log('SongForm -> mounted')
+    console.log('SongUpdate -> mounted')
   }
 
 }

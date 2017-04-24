@@ -5,25 +5,29 @@
       <Navigation></Navigation>
     </div>
 
-    <!--DISPLAY OF ALL SONGS-->
+
     <div class="container">
       <div class="row">
-        <div class="col-md-2 col-lg-2 add">
+        <!---DESKTOP ADD SONG BTN-->
+        <div class="hidden-xs hidden-sm col-md-2 col-lg-2 add">
           <button type="button" class="btn btn-primary">Add Song</button>
         </div>
-        <div class="col-md-4 col-lg-4 search">
+        <!--SEARCH-->
+        <!-- <div class="col-md-4 col-lg-4 search">
+          <form method="get" action="/serach" role="search">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
+            <input name="q" type="text" class="form-control" placeholder="Search for...">
             <span class="input-group-btn">
               <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
             </span>
-          </div><!-- /input-group -->
-        </div><!-- /.col-lg-4 -->
+          </div>
+          </form>
+        </div> -->
       </div>
 
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-
+            <!--DISPLAY OF ALL SONGS-->
             <div class="SongsList" v-show="songs.length > 0">
               <AllSongs v-for="(song, index) in songs" :key="index" :song="song"></AllSongs>
             </div>
@@ -33,7 +37,17 @@
 
         <!-- <SongInfo></SongInfo> -->
       </div>
+
+      <!--Add New button for mobile-->
+      <!--Source: https://codepen.io/simoberny/pen/pJZJQY-->
+        <div class="visible-xs visible-sm">
+          <div id="floating-button">
+            <p class="plus">+</p>
+          </div>
+        </div>
     </div>
+
+
 
     <!--FOOTER-->
     <div class="container-fluid">
@@ -49,6 +63,7 @@
   import AllSongs from './AllSongs';
   import SongForm from './SongForm';
   import SongInfo from './SongInfo';
+  import SongUpdate from './SongUpdate';
 
   export default {
     components: {
@@ -107,5 +122,43 @@ body {
 .btn-primary {
   background-color: #6D8C77 !important;
   border-color: #6D8C77 !important;
+}
+
+#floating-button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #6D8C77;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px #666;
+}
+
+.plus {
+  color: white;
+  position: absolute;
+  top: 0;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  line-height: 60px;
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.form-control:focus {
+  border-color: #000 !important;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.6) !important;
+}
+
+input::placeholder {
+  font-family: 'Open sans' sans-serif;
+  font-style: italic;
 }
 </style>

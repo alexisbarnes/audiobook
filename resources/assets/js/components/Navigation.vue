@@ -42,6 +42,10 @@ export default {
 
 <style scoped>
 /*BOOTSTRAP NAVBAR*/
+a {
+  cursor: pointer;
+}
+
 .navbar-default {
   background-color: transparent;
   border-color: transparent;
@@ -60,6 +64,10 @@ li {
     margin-top: 30px;
 }
 
+.navbar-brand {
+  margin-bottom: 28px;
+}
+
 /*ACTIVE & HOVER A*/
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     background-color: transparent;
@@ -68,6 +76,61 @@ li {
 
 .navbar-default .navbar-nav > li > a:hover {
     color: #A6130F;
+}
+
+/*--HAMBURGER BREAK POINT (https://coderwall.com/p/wpjw4w/change-the-bootstrap-navbar-breakpoint)--*/
+@media (max-width: 1200px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-toggle:hover {
+      background-color: #A6130F !important;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+
+    .navbar-default .navbar-toggle {
+      border-color: #ccc;
+    }
+
+    .navbar-default .navbar-collapse {
+      border-color: transparent;
+    }
+
+    .navbar-default .navbar-toggle .icon-bar {
+      background-color: #000;
+    }
 }
 
 /*LOGO*/

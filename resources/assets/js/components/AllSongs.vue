@@ -4,10 +4,14 @@
         <div class="songInfo" :style="{'background-image': 'url(' + song.artwork + ')'}">
           <div class="opacity">
             <div class="songFormat">
-              <span class="infoTitle">title:</span><p class="info"> {{ song.title }} </p><br>
+              <span class="infoTitle">title:</span><p class="info"> {{ song.title }} </p> <div class="delete"><p class="x-style">x</p></div><br>
               <span class="infoTitle">artist:</span><p class="info"> {{ song.artist }} </p><br>
               <span class="infoTitle">album:</span><p class="info"> {{ song.album }}</p><br>
               <span class="infoTitle">genre:</span><p class="info"> {{ song.genre }}</p>
+            </div>
+
+            <div class="buttons">
+
             </div>
           </div>
         </div>
@@ -80,6 +84,33 @@ body {
 
 .songFormat {
   margin: 10px;
+}
+
+/*DELETE BTN*/
+.delete {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #A6130F;
+  /*position: fixed;*/
+  /*bottom: 30px;*/
+  /*right: 30px;*/
+  /*cursor: pointer;*/
+  box-shadow: 0px 2px 5px #666;
+  display: inline-block;
+  margin-top: 10px;
+  float: right;
+}
+
+.x-style {
+  color: #FFF;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  line-height: 17px;
+  font-size: 35px;
+  font-weight: 300;
 }
 
 /*MEDIA QUERIES*/
