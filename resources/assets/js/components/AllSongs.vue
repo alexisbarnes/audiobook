@@ -4,7 +4,7 @@
         <div class="songInfo" :style="{'background-image': 'url(' + song.artwork + ')'}">
           <div class="opacity">
             <div class="songFormat">
-              <span class="infoTitle">title:</span><p class="info"> {{ song.title }} </p> <div class="delete"><p class="x-style">x</p></div><br>
+              <span class="infoTitle">title:</span><p class="info"> {{ song.title }} </p> <a href="#" @click.prevent="remove"><div class="delete"><p class="x-style">x</p></div></a><br>
               <span class="infoTitle">artist:</span><p class="info"> {{ song.artist }} </p><br>
               <span class="infoTitle">album:</span><p class="info"> {{ song.album }}</p><br>
               <span class="infoTitle">genre:</span><p class="info"> {{ song.genre }}</p>
@@ -42,6 +42,18 @@ export default {
       video: this.song.video,
       genre: this.song.genre
     }
+  },
+
+  remove () {
+    console.log('Song -> remove');
+    axios.delete(`/songs/${this.song.id}`)
+      .then((reponse) => {
+        console.log('Song -> remove success');
+        this.$emit('deleted')
+      })
+      .catch((error) => {
+        console.log('Song -> remove error');
+      });
   }
 
 }

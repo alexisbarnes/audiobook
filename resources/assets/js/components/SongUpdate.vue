@@ -10,22 +10,22 @@
       <div class="col-md-12">
         <div class="col-md-6">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="" />
+            <input class="form-control" type="text" placeholder="" v-model="title"/>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="" />
+            <input class="form-control" type="text" placeholder="" v-model="artist"/>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="" />
+            <input class="form-control" type="text" placeholder="" v-model="album"/>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <select class="form-control">
+            <select class="form-control" v-model="genre">
               <option>Alternative</option>
               <option>Americana</option>
               <option>Blues</option>
@@ -63,16 +63,16 @@
         </div>
         <div class="col-md-12">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="" />
+            <input class="form-control" type="text" placeholder="" v-model="artwork"/>
           </div>
         </div>
         <div class="col-md-12">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="" />
+            <input class="form-control" type="text" placeholder="" v-model="video"/>
           </div>
         </div>
         <div class="col-md-12">
-          <button class="btn btn-primary pull-right create">update</button>
+          <button class="btn btn-primary pull-right create" @click="update">update</button>
         </div>
       </div>
     </div>

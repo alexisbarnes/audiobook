@@ -10,22 +10,22 @@
       <div class="col-md-12">
         <div class="col-md-6">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="song title" />
+            <input class="form-control" type="text" placeholder="song title" v-model="title" />
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="artist" />
+            <input class="form-control" type="text" placeholder="artist" v-model="artist"/>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="album" />
+            <input class="form-control" type="text" placeholder="album" v-model="album" />
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <select class="form-control">
+            <select class="form-control" value="" v-model="genre">
               <option>Alternative</option>
               <option>Americana</option>
               <option>Blues</option>
@@ -63,16 +63,16 @@
         </div>
         <div class="col-md-12">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="link to cover art..." />
+            <input class="form-control" type="text" placeholder="link to cover art..." v-model="artwork"/>
           </div>
         </div>
         <div class="col-md-12">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="youtube id..." />
+            <input class="form-control" type="text" placeholder="youtube id..." v-model="video"/>
           </div>
         </div>
         <div class="col-md-12">
-          <button class="btn btn-primary pull-right create">create</button>
+          <button class="btn btn-primary pull-right create" @click="create">create</button>
         </div>
       </div>
     </div>
@@ -81,14 +81,54 @@
 
 <script>
 import axios from 'axios';
+
 export default {
-  name: 'SongForm',
 
-  mounted () {
-    console.log('SongForm -> mounted')
+  data() {
+    return {
+      title: '',
+      artist: '',
+      album: '',
+      genre: '',
+      artwork: '',
+      video: ''
+    }
+  },
+  methods: {
+    create () {
+      console.log('SongForm -> create');
+      this.sendRequest();
+    },
+    sendRequest () {
+      axios.post('/contacts', {
+        title: this.title,
+        artist: this.artist,
+        album: this.album,
+        genre: this.genre,
+        artwork: this.artwork,
+        video: this.video
+      })
+      .then((response) => {
+        console.log('SongForm -> sendRequest success');
+        console.log(response.data);
+        this.reset();
+        this.$emit('created');
+      })
+      .catch((error) => {
+        console.error('SongForm -> sendRequest error');
+        // show an error message
+      });
+    },
+    reset () {
+      this.title = '';
+      this.artist = '';
+      this.album = '';
+      this.genre = '';
+      this.artwork = '';
+      this.video = '';
+    }
   }
-
-}
+};
 </script>
 
 <style scoped>
