@@ -55,6 +55,33 @@ export default {
       video: this.song.video,
       genre: this.song.genre
     }
+  },
+
+  methods: {
+    //Videoplayer functions
+    ready (player) {
+      this.player = player
+    },
+
+    playing(player) {
+      //The player is playing a video
+    },
+
+    change () {
+      // when you change the value, the player will also change.
+      // If you would like to change `playerVars`, please change it before you change `videoId`.
+      // If `playerVars.autoplay` is 1, `loadVideoById` will be called.
+      // If `playersVars.autoplay` is 0, `cueVideoById` will be called.
+      this.videoId = 'another video id'
+    },
+
+    stop () {
+      this.player.stopVideo()
+    },
+
+    pause () {
+      this.player.pauseVideo()
+    }
   }
 
 }

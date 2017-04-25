@@ -16,7 +16,7 @@
       </div>
 
       <div v-show="currentSong">
-        <SongInfo></SongInfo>
+        <SongInfo :song="song"></SongInfo>
       </div>
     </div>
 

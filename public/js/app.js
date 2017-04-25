@@ -22297,7 +22297,32 @@ __WEBPACK_IMPORTED_MODULE_1_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2_vue_
       video: this.song.video,
       genre: this.song.genre
     };
+  },
+
+
+  methods: {
+    //Videoplayer functions
+    ready: function ready(player) {
+      this.player = player;
+    },
+    playing: function playing(player) {
+      //The player is playing a video
+    },
+    change: function change() {
+      // when you change the value, the player will also change.
+      // If you would like to change `playerVars`, please change it before you change `videoId`.
+      // If `playerVars.autoplay` is 1, `loadVideoById` will be called.
+      // If `playersVars.autoplay` is 0, `cueVideoById` will be called.
+      this.videoId = 'another video id';
+    },
+    stop: function stop() {
+      this.player.stopVideo();
+    },
+    pause: function pause() {
+      this.player.pauseVideo();
+    }
   }
+
 });
 
 /***/ }),
@@ -42836,7 +42861,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.currentSong),
       expression: "currentSong"
     }]
-  }, [_c('SongInfo')], 1)])
+  }, [_c('SongInfo', {
+    attrs: {
+      "song": _vm.song
+    }
+  })], 1)])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "delete"
