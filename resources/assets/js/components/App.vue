@@ -12,23 +12,12 @@
         <div class="hidden-xs hidden-sm col-md-2 col-lg-2 add">
           <div v-if="showForm">
             <!--CANCEL BUTTON FOR SONGFORM-->
-            <a href="#" @click="cancel()"><div class="delete"><p class="x-style">x</p></div></a>
+            <a href="#" @click="cancel()"><div class="close"><p class="x-style">x</p></div></a>
           </div>
           <div v-else>
             <button type="button" class="btn btn-primary" @click="songForm()" :songForm="songForm">Add Song</button>
           </div>
         </div>
-        <!--SEARCH-->
-        <!-- <div class="col-md-4 col-lg-4 search">
-          <form method="get" action="/serach" role="search">
-          <div class="input-group">
-            <input name="q" type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
-            </span>
-          </div>
-          </form>
-        </div> -->
       </div>
 
       <div class="row">
@@ -38,13 +27,11 @@
             <SongForm @created="fetch"></SongForm>
           </div>
           <div v-else>
+              <SongInfo @closed="closed" v-if="activeSong" :song="activeSong"></SongInfo>
+              <div v-show="!activeSong">
+                <AllSongs v-for="(song, index) in songs" :song="song" @selected="selectedSong"></AllSongs>
+              </div>
 
-            <!--DISPLAY OF ALL SONGS-->
-
-                <div class="SongsList" v-show="songs.length > 0">
-                  <AllSongs v-for="(song, index) in songs" :key="index" :song="song" @updated="update" @deleted="remove(index)"></AllSongs>
-                </div>
-                <p v-show="songs.length === 0">There is no music in the database.</p>
 
           </div>
 
@@ -91,7 +78,7 @@
       return {
         songs: [],
         showForm: false,
-        hideList: true
+        activeSong: null
       }
     },
 
@@ -109,8 +96,12 @@
 
       },
 
-      hideAll () {
-        this.hideList = false
+      selectedSong(s) {
+        this.activeSong = s
+      },
+
+      closed () {
+        this.activeItem = null
       },
 
       cancel () {
@@ -206,7 +197,7 @@ input::placeholder {
   font-style: italic;
 }
 
-.delete {
+.close {
   width: 40px;
   height: 40px;
   border-radius: 50%;

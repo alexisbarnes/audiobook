@@ -1,11 +1,7 @@
 <template>
   <div class="SongInfo">
     <div class="row">
-      <div v-if="UpdateForm">
-        <SongUpdate :song="song"></SongUpdate>
-      </div>
 
-      <div v-else>
       <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 background">
         <!---YOUTUBE VIDEO-->
         <!--https://github.com/kaorun343/vue-youtube-embed-->
@@ -38,7 +34,6 @@
             </div>
 
           </div>
-        </div>
 
         </div>
       </div>

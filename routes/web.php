@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('app');
 });
 
+Route::get('/styles', function (){
+  return view ('styles');
+});
 
 // api routes
 Route::get('/songs', 'SongController@index');

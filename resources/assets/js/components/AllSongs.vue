@@ -1,19 +1,13 @@
 <template>
   <div>
-    <div v-if="currentSong">
       <!--CANCEL BUTTON FOR SONGFORM-->
       <a href="#" @click="cancel()"><div class="delete"><p class="x-style">x</p></div></a>
-    </div>
 
-    <div v-if="currentSong">
-      <SongInfo :song="song"></SongInfo>
-    </div>
-    <div v-else>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
 
 
-        <div class="Song">
-          <a href="#" @click="showSelected()">
+        <div class="Song" @click="chosen">
+          <a href="#">
             <div class="songInfo" :style="{'background-image': 'url(' + song.artwork + ')'}">
               <div class="opacity">
                 <div class="songFormat">
@@ -28,7 +22,6 @@
         </div>
 
       </div>
-    </div>
 
 
   </div>
@@ -59,13 +52,13 @@ export default {
       album: this.song.album,
       artwork: this.song.artwork,
       video: this.song.video,
-      genre: this.song.genre,
-      currentSong: false
+      genre: this.song.genre
     }
   },
   methods: {
-  showSelected () {
-    this.currentSong = true;
+  chosen () {
+    // this.currentSong = true;
+    this.$emit('selected', this.song)
   },
 
   cancel () {
