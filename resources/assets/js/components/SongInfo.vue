@@ -1,6 +1,11 @@
 <template>
   <div class="SongInfo">
     <div class="row">
+      <div v-if="UpdateForm">
+        <SongUpdate :song="song"></SongUpdate>
+      </div>
+
+      <div v-else>
       <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 background">
         <!---YOUTUBE VIDEO-->
         <!--https://github.com/kaorun343/vue-youtube-embed-->
@@ -13,6 +18,7 @@
       </div>
 
           <div class="line-break"></div>
+          <a href="#" class="edit-link" @click="showEditing()">edit</a>
 
           <!--BOTTOM OF FORUM-->
             <div class="row">
@@ -21,15 +27,19 @@
                   <img :src="song.artwork" class="coverArt"/>
                 </div>
 
-                <div class="col-md-8">
+                <div class="col-md-8 all-info">
                   <p class="info"> {{ song.title }} </p>
                   <p class="info"> {{ song.artist }} </p>
                   <p class="info"> {{ song.album }} </p>
                   <p class="info"> {{ song.genre }} </p>
                 </div>
+
               </div>
             </div>
+
           </div>
+        </div>
+
         </div>
       </div>
     </div>
@@ -38,11 +48,15 @@
 
 <script>
 import axios from 'axios';
+import SongUpdate from './SongUpdate'
 import Vue from 'vue';
 import VueYouTubeEmbed from 'vue-youtube-embed';
 Vue.use(VueYouTubeEmbed);
 
 export default {
+  components: {
+    SongUpdate
+  },
   name: 'SongInfo',
 
   mounted () {
@@ -60,11 +74,15 @@ export default {
       album: this.song.album,
       artwork: this.song.artwork,
       video: this.song.video,
-      genre: this.song.genre
+      genre: this.song.genre,
+      UpdateForm: false
     }
   },
 
   methods: {
+    showEditing () {
+      this.UpdateForm = true
+    },
     //Videoplayer functions
     ready (player) {
       this.player = player
@@ -102,22 +120,10 @@ body {
 .background {
   background-color: #F4EDE6;
   border-radius: 25px;
-  height: 750px;
+  height: 810px;
   margin: 20px;
 }
 
-.formTitle {
-  font-family: 'Abril Fatface', cursive;
-  font-size: 50px;
-  text-align: center;
-  color: #000;
-}
-
-.back {
-  display: inline-block;
-  float: right;
-  margin-top: 37px;
-}
 
 a {
   color: #000 !important;
@@ -128,29 +134,24 @@ a:hover {
   color: #A6130F !important;
   text-decoration: none
 }
-
-.back img {
-  height: 28px;
-  width: auto;
+/*VIDEO*/
+.video {
+  margin: 20px 0 0 0;
+  text-align: center;
 }
 
-.backTxt {
-  margin: 5px;
+/*LINE BEAK*/
+.line-break {
+  border-bottom: 1px solid #ccc;
+  margin: 20px;
 }
 
-/*INPUT FORM*/
-.form-group {
-  margin: 24px;
+/*EDIT*/
+.edit-link {
+  float: right;
+  padding: 0 18px 0 0;
 }
 
-.form-control:focus {
-  border-color: #000;
-}
-
-input::placeholder {
-  font-family: 'Open Sans', sans-serif;
-  font-style: italic;
-}
 
 /*IMG*/
 .coverArt {
@@ -158,13 +159,18 @@ input::placeholder {
   width: auto;
 }
 
-/*BTN STYLES*/
-.create {
-  margin-right: 25px;
-  font-size: 40px;
-  padding: 3px 58px;
-  border-radius: 9px;
+.all-info {
+  padding: 24px 0 0 90px;
+  font-family: 'Open sans', sans-serif;
+  color: #000;
+  font-size: 30px;
 }
 
+/*Video player is responsive for mobile*/
+@media screen and (max-width: 700px) {
+  iframe {
+    width: 100%;
+  }
+}
 
 </style>

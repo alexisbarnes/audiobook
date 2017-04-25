@@ -1,26 +1,26 @@
 <template>
   <div class="SongForm">
     <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 background">
+      <!-- <div class="live" v-show="!editing"> -->
       <!---TITLE-->
       <div class="col-md-12">
-        <a href="#" class="back"><img src="/images/back-arrow.png" /><span class="backTxt">back</span></a>
-        <h1 class="formTitle">update song</h1>
+        <h1 class="formTitle">{{ song. title }} - {{ song.artist }}</h1>
       </div>
       <!---FORM-->
       <div class="col-md-12">
         <div class="col-md-6">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="" v-model="title"/>
+            <input class="form-control" type="text" v-model="title"/>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="" v-model="artist"/>
+            <input class="form-control" type="text" v-model="artist"/>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="" v-model="album"/>
+            <input class="form-control" type="text" v-model="album"/>
           </div>
         </div>
         <div class="col-md-6">
@@ -63,18 +63,20 @@
         </div>
         <div class="col-md-12">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="" v-model="artwork"/>
+            <input class="form-control" type="text" v-model="artwork"/>
           </div>
         </div>
         <div class="col-md-12">
           <div class="form-group">
-            <input class="form-control" type="text" placeholder="" v-model="video"/>
+            <input class="form-control" type="text" v-model="video"/>
           </div>
         </div>
         <div class="col-md-12">
           <button class="btn btn-primary pull-right create" @click="update">update</button>
         </div>
       </div>
+
+      <!-- </div> -->
     </div>
   </div>
 </template>
@@ -87,6 +89,10 @@ export default {
   mounted () {
     console.log('SongUpdate -> mounted')
   },
+
+  props: [
+    'song'
+  ],
 
   methods: {
     update () {

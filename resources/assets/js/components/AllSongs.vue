@@ -5,27 +5,29 @@
       <a href="#" @click="cancel()"><div class="delete"><p class="x-style">x</p></div></a>
     </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-      <div v-if="currentSong">
-        <SongInfo :song="song"></SongInfo>
-      </div>
+    <div v-if="currentSong">
+      <SongInfo :song="song"></SongInfo>
+    </div>
+    <div v-else>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
 
-      <div v-else>
-      <div class="Song">
-        <a href="#" @click="showSelected()">
-          <div class="songInfo" :style="{'background-image': 'url(' + song.artwork + ')'}">
-            <div class="opacity">
-              <div class="songFormat">
-                <span class="infoTitle">title:</span><p class="info"> {{ song.title }} </p> <a href="#" @click.prevent="remove"><div class="delete"><p class="x-style">x</p></div></a><br>
-                <span class="infoTitle">artist:</span><p class="info"> {{ song.artist }} </p><br>
-                <span class="infoTitle">album:</span><p class="info"> {{ song.album }}</p><br>
-                <span class="infoTitle">genre:</span><p class="info"> {{ song.genre }}</p>
+
+        <div class="Song">
+          <a href="#" @click="showSelected()">
+            <div class="songInfo" :style="{'background-image': 'url(' + song.artwork + ')'}">
+              <div class="opacity">
+                <div class="songFormat">
+                  <span class="infoTitle">title:</span><p class="info"> {{ song.title }} </p> <a href="#" @click.prevent="remove"><div class="delete"><p class="x-style">x</p></div></a><br>
+                  <span class="infoTitle">artist:</span><p class="info"> {{ song.artist }} </p><br>
+                  <span class="infoTitle">album:</span><p class="info"> {{ song.album }}</p><br>
+                  <span class="infoTitle">genre:</span><p class="info"> {{ song.genre }}</p>
+                </div>
               </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
+
       </div>
-    </div>
     </div>
 
 

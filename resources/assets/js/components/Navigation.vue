@@ -15,10 +15,10 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">home <span class="sr-only">(current)</span></a></li>
+        <!-- <li><a href="#">home <span class="sr-only">(current)</span></a></li> -->
         <li><a href="https://www.github.com/alexisbarnes" target="_blank">github</a></li>
         <li><a href="#">style guide</a></li>
-        <li><a href="https://alexisbarnes.gitbooks.io/audiobook/">documentation</a></li>
+        <li><a href="https://alexisbarnes.gitbooks.io/audiobook/" target="_blank">documentation</a></li>
         <li><a href="#">credits</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->

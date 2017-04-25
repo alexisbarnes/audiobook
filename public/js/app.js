@@ -21824,6 +21824,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -22258,10 +22260,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_youtube_embed__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_youtube_embed___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vue_youtube_embed__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SongUpdate__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SongUpdate___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__SongUpdate__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue_youtube_embed__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue_youtube_embed___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_vue_youtube_embed__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -22304,9 +22318,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-__WEBPACK_IMPORTED_MODULE_1_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2_vue_youtube_embed___default.a);
+
+__WEBPACK_IMPORTED_MODULE_2_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_3_vue_youtube_embed___default.a);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    SongUpdate: __WEBPACK_IMPORTED_MODULE_1__SongUpdate___default.a
+  },
   name: 'SongInfo',
 
   mounted: function mounted() {
@@ -22323,12 +22341,17 @@ __WEBPACK_IMPORTED_MODULE_1_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2_vue_
       album: this.song.album,
       artwork: this.song.artwork,
       video: this.song.video,
-      genre: this.song.genre
+      genre: this.song.genre,
+      UpdateForm: false
     };
   },
 
 
   methods: {
+    showEditing: function showEditing() {
+      this.UpdateForm = true;
+    },
+
     //Videoplayer functions
     ready: function ready(player) {
       this.player = player;
@@ -22442,6 +22465,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -22451,6 +22476,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     console.log('SongUpdate -> mounted');
   },
 
+
+  props: ['song'],
 
   methods: {
     update: function update() {
@@ -24924,7 +24951,7 @@ if (typeof jQuery === 'undefined') {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\nbody[data-v-241a684a] {\n  font-family: 'Open Sans', sans-serif;\n}\n.background[data-v-241a684a] {\n  background-color: #F4EDE6;\n  border-radius: 25px;\n  height: 750px;\n  margin: 20px;\n}\n.formTitle[data-v-241a684a] {\n  font-family: 'Abril Fatface', cursive;\n  font-size: 50px;\n  text-align: center;\n  color: #000;\n}\n.back[data-v-241a684a] {\n  display: inline-block;\n  float: right;\n  margin-top: 37px;\n}\na[data-v-241a684a] {\n  color: #000 !important;\n  font-size: 20px;\n}\na[data-v-241a684a]:hover {\n  color: #A6130F !important;\n  text-decoration: none\n}\n.back img[data-v-241a684a] {\n  height: 28px;\n  width: auto;\n}\n.backTxt[data-v-241a684a] {\n  margin: 5px;\n}\n\n/*INPUT FORM*/\n.form-group[data-v-241a684a] {\n  margin: 24px;\n}\n.form-control[data-v-241a684a]:focus {\n  border-color: #000;\n}\ninput[data-v-241a684a]::-webkit-input-placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\ninput[data-v-241a684a]:-ms-input-placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\ninput[data-v-241a684a]::placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\n\n/*IMG*/\n.coverArt[data-v-241a684a] {\n  height: 300px;\n  width: auto;\n}\n\n/*BTN STYLES*/\n.create[data-v-241a684a] {\n  margin-right: 25px;\n  font-size: 40px;\n  padding: 3px 58px;\n  border-radius: 9px;\n}\n\n\n", ""]);
+exports.push([module.i, "\nbody[data-v-241a684a] {\n  font-family: 'Open Sans', sans-serif;\n}\n.background[data-v-241a684a] {\n  background-color: #F4EDE6;\n  border-radius: 25px;\n  height: 810px;\n  margin: 20px;\n}\na[data-v-241a684a] {\n  color: #000 !important;\n  font-size: 20px;\n}\na[data-v-241a684a]:hover {\n  color: #A6130F !important;\n  text-decoration: none\n}\n/*VIDEO*/\n.video[data-v-241a684a] {\n  margin: 20px 0 0 0;\n  text-align: center;\n}\n\n/*LINE BEAK*/\n.line-break[data-v-241a684a] {\n  border-bottom: 1px solid #ccc;\n  margin: 20px;\n}\n\n/*EDIT*/\n.edit-link[data-v-241a684a] {\n  float: right;\n  padding: 0 18px 0 0;\n}\n\n\n/*IMG*/\n.coverArt[data-v-241a684a] {\n  height: 300px;\n  width: auto;\n}\n.all-info[data-v-241a684a] {\n  padding: 24px 0 0 90px;\n  font-family: 'Open sans', sans-serif;\n  color: #000;\n  font-size: 30px;\n}\n\n/*Video player is responsive for mobile*/\n@media screen and (max-width: 700px) {\niframe[data-v-241a684a] {\n    width: 100%;\n}\n}\n\n", ""]);
 
 /***/ }),
 /* 45 */
@@ -42297,7 +42324,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "SongInfo"
   }, [_c('div', {
     staticClass: "row"
-  }, [_c('div', {
+  }, [(_vm.UpdateForm) ? _c('div', [_c('SongUpdate', {
+    attrs: {
+      "song": _vm.song
+    }
+  })], 1) : _c('div', [_c('div', {
     staticClass: "col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 background"
   }, [_c('div', {
     staticClass: "row"
@@ -42315,7 +42346,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })], 1)])]), _vm._v(" "), _c('div', {
     staticClass: "line-break"
-  }), _vm._v(" "), _c('div', {
+  }), _vm._v(" "), _c('a', {
+    staticClass: "edit-link",
+    attrs: {
+      "href": "#"
+    },
+    on: {
+      "click": function($event) {
+        _vm.showEditing()
+      }
+    }
+  }, [_vm._v("edit")]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('div', {
     staticClass: "col-md-12"
@@ -42327,7 +42368,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "src": _vm.song.artwork
     }
   })]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-8"
+    staticClass: "col-md-8 all-info"
   }, [_c('p', {
     staticClass: "info"
   }, [_vm._v(" " + _vm._s(_vm.song.title) + " ")]), _vm._v(" "), _c('p', {
@@ -42336,7 +42377,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "info"
   }, [_vm._v(" " + _vm._s(_vm.song.album) + " ")]), _vm._v(" "), _c('p', {
     staticClass: "info"
-  }, [_vm._v(" " + _vm._s(_vm.song.genre) + " ")])])])])])])])
+  }, [_vm._v(" " + _vm._s(_vm.song.genre) + " ")])])])])])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -42355,7 +42396,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "SongForm"
   }, [_c('div', {
     staticClass: "col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 background"
-  }, [_vm._m(0), _vm._v(" "), _c('div', {
+  }, [_c('div', {
+    staticClass: "col-md-12"
+  }, [_c('h1', {
+    staticClass: "formTitle"
+  }, [_vm._v(_vm._s(_vm.song.title) + " - " + _vm._s(_vm.song.artist))])]), _vm._v(" "), _c('div', {
     staticClass: "col-md-12"
   }, [_c('div', {
     staticClass: "col-md-6"
@@ -42370,8 +42415,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }],
     staticClass: "form-control",
     attrs: {
-      "type": "text",
-      "placeholder": ""
+      "type": "text"
     },
     domProps: {
       "value": (_vm.title)
@@ -42395,8 +42439,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }],
     staticClass: "form-control",
     attrs: {
-      "type": "text",
-      "placeholder": ""
+      "type": "text"
     },
     domProps: {
       "value": (_vm.artist)
@@ -42420,8 +42463,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }],
     staticClass: "form-control",
     attrs: {
-      "type": "text",
-      "placeholder": ""
+      "type": "text"
     },
     domProps: {
       "value": (_vm.album)
@@ -42468,8 +42510,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }],
     staticClass: "form-control",
     attrs: {
-      "type": "text",
-      "placeholder": ""
+      "type": "text"
     },
     domProps: {
       "value": (_vm.artwork)
@@ -42493,8 +42534,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }],
     staticClass: "form-control",
     attrs: {
-      "type": "text",
-      "placeholder": ""
+      "type": "text"
     },
     domProps: {
       "value": (_vm.video)
@@ -42513,24 +42553,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "click": _vm.update
     }
   }, [_vm._v("update")])])])])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "col-md-12"
-  }, [_c('a', {
-    staticClass: "back",
-    attrs: {
-      "href": "#"
-    }
-  }, [_c('img', {
-    attrs: {
-      "src": "/images/back-arrow.png"
-    }
-  }), _c('span', {
-    staticClass: "backTxt"
-  }, [_vm._v("back")])]), _vm._v(" "), _c('h1', {
-    staticClass: "formTitle"
-  }, [_vm._v("update song")])])
-}]}
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
@@ -42850,13 +42873,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.cancel()
       }
     }
-  }, [_vm._m(0)])]) : _vm._e(), _vm._v(" "), _c('div', {
-    staticClass: "col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
-  }, [(_vm.currentSong) ? _c('div', [_c('SongInfo', {
+  }, [_vm._m(0)])]) : _vm._e(), _vm._v(" "), (_vm.currentSong) ? _c('div', [_c('SongInfo', {
     attrs: {
       "song": _vm.song
     }
   })], 1) : _c('div', [_c('div', {
+    staticClass: "col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+  }, [_c('div', {
     staticClass: "Song"
   }, [_c('a', {
     attrs: {
@@ -42989,15 +43012,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('ul', {
     staticClass: "nav navbar-nav"
-  }, [_c('li', {
-    staticClass: "active"
-  }, [_c('a', {
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("home "), _c('span', {
-    staticClass: "sr-only"
-  }, [_vm._v("(current)")])])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_c('li', [_c('a', {
     attrs: {
       "href": "https://www.github.com/alexisbarnes",
       "target": "_blank"
@@ -43008,7 +43023,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("style guide")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
-      "href": "https://alexisbarnes.gitbooks.io/audiobook/"
+      "href": "https://alexisbarnes.gitbooks.io/audiobook/",
+      "target": "_blank"
     }
   }, [_vm._v("documentation")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
