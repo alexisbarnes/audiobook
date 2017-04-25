@@ -72,7 +72,7 @@
           </div>
         </div>
         <div class="col-md-12">
-          <button class="btn btn-primary pull-right create" @click="create">create</button>
+          <button class="btn btn-primary pull-right create" @click="create()">create</button>
         </div>
       </div>
     </div>
@@ -100,7 +100,7 @@ export default {
       this.sendRequest();
     },
     sendRequest () {
-      axios.post('/contacts', {
+      axios.post('/songs', {
         title: this.title,
         artist: this.artist,
         album: this.album,
