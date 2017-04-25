@@ -12,7 +12,7 @@
         <div class="hidden-xs hidden-sm col-md-2 col-lg-2 add">
           <div v-if="showForm">
             <!--CANCEL BUTTON FOR SONGFORM-->
-            <button type="button" class="btn btn-primary" @click="songForm()" :songForm="songForm">Cancel</button>
+            <a href="#" @click="cancel()"><div class="delete"><p class="x-style">x</p></div></a>
           </div>
           <div v-else>
             <button type="button" class="btn btn-primary" @click="songForm()" :songForm="songForm">Add Song</button>
@@ -104,6 +104,10 @@
         console.log('this.creating = ' + this.creating);
       },
 
+      cancel () {
+        this.showForm = false;
+      },
+
       fetch () {
         console.log('App -> fetch');
         axios.get('/songs')
@@ -191,5 +195,31 @@ body {
 input::placeholder {
   font-family: 'Open sans' sans-serif;
   font-style: italic;
+}
+
+.delete {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #A6130F;
+  /*position: fixed;*/
+  /*bottom: 30px;*/
+  /*right: 30px;*/
+  /*cursor: pointer;*/
+  box-shadow: 0px 2px 5px #666;
+  display: inline-block;
+  margin-top: 10px;
+  float: right;
+}
+
+.x-style {
+  color: #FFF;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  line-height: 17px;
+  font-size: 35px;
+  font-weight: 300;
 }
 </style>

@@ -21928,6 +21928,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       console.log('songForm');
       console.log('this.creating = ' + this.creating);
     },
+    cancel: function cancel() {
+      this.showForm = false;
+    },
     fetch: function fetch() {
       var _this = this;
 
@@ -24829,7 +24832,7 @@ exports.push([module.i, "\nbody[data-v-35bb1560] {\n  font-family: 'Open Sans', 
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\nbody {\n  background-color: #F9F9F9;\n  font-family: 'Open Sans', sans-serif;\n  color: #000;\n}\n.search {\n  margin: 14px;\n  float: right !important;\n}\n.add {\n  margin: 14px;\n}\n.btn-primary {\n  background-color: #6D8C77 !important;\n  border-color: #6D8C77 !important;\n}\n#floating-button {\n  width: 55px;\n  height: 55px;\n  border-radius: 50%;\n  background: #6D8C77;\n  position: fixed;\n  bottom: 30px;\n  right: 30px;\n  cursor: pointer;\n  box-shadow: 0px 2px 5px #666;\n}\n.plus {\n  color: white;\n  position: absolute;\n  top: 0;\n  display: block;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  text-align: center;\n  padding: 0;\n  margin: 0;\n  line-height: 60px;\n  font-size: 60px;\n  font-weight: 300;\n}\n.form-control:focus {\n  border-color: #000 !important;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.6) !important;\n}\ninput::-webkit-input-placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\ninput:-ms-input-placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\ninput::placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\n", ""]);
+exports.push([module.i, "\nbody {\n  background-color: #F9F9F9;\n  font-family: 'Open Sans', sans-serif;\n  color: #000;\n}\n.search {\n  margin: 14px;\n  float: right !important;\n}\n.add {\n  margin: 14px;\n}\n.btn-primary {\n  background-color: #6D8C77 !important;\n  border-color: #6D8C77 !important;\n}\n#floating-button {\n  width: 55px;\n  height: 55px;\n  border-radius: 50%;\n  background: #6D8C77;\n  position: fixed;\n  bottom: 30px;\n  right: 30px;\n  cursor: pointer;\n  box-shadow: 0px 2px 5px #666;\n}\n.plus {\n  color: white;\n  position: absolute;\n  top: 0;\n  display: block;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  text-align: center;\n  padding: 0;\n  margin: 0;\n  line-height: 60px;\n  font-size: 60px;\n  font-weight: 300;\n}\n.form-control:focus {\n  border-color: #000 !important;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.6) !important;\n}\ninput::-webkit-input-placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\ninput:-ms-input-placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\ninput::placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\n.delete {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  background: #A6130F;\n  /*position: fixed;*/\n  /*bottom: 30px;*/\n  /*right: 30px;*/\n  /*cursor: pointer;*/\n  box-shadow: 0px 2px 5px #666;\n  display: inline-block;\n  margin-top: 10px;\n  float: right;\n}\n.x-style {\n  color: #FFF;\n  display: block;\n  text-align: center;\n  padding: 10px;\n  margin: 0;\n  line-height: 17px;\n  font-size: 35px;\n  font-weight: 300;\n}\n", ""]);
 
 /***/ }),
 /* 47 */
@@ -42665,18 +42668,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "row"
   }, [_c('div', {
     staticClass: "hidden-xs hidden-sm col-md-2 col-lg-2 add"
-  }, [(_vm.showForm) ? _c('div', [_c('button', {
-    staticClass: "btn btn-primary",
+  }, [(_vm.showForm) ? _c('div', [_c('a', {
     attrs: {
-      "type": "button",
-      "songForm": _vm.songForm
+      "href": "#"
     },
     on: {
       "click": function($event) {
-        _vm.songForm()
+        _vm.cancel()
       }
     }
-  }, [_vm._v("Cancel")])]) : _c('div', [_c('button', {
+  }, [_vm._m(0)])]) : _c('div', [_c('button', {
     staticClass: "btn btn-primary",
     attrs: {
       "type": "button",
@@ -42730,10 +42731,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.songs.length === 0),
       expression: "songs.length === 0"
     }]
-  }, [_vm._v("There is no music in the database.")])])]), _vm._v(" "), _vm._m(0)]), _vm._v(" "), _c('div', {
+  }, [_vm._v("There is no music in the database.")])])]), _vm._v(" "), _vm._m(1)]), _vm._v(" "), _c('div', {
     staticClass: "container-fluid"
   }, [_c('FootNav')], 1)])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "delete"
+  }, [_c('p', {
+    staticClass: "x-style"
+  }, [_vm._v("x")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "visible-xs visible-sm"
   }, [_c('div', {
