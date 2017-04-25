@@ -38,7 +38,7 @@ export default {
     'song',
   ],
 
-  data() {
+  data () {
     return {
       title: this.song.title,
       artist: this.song.artist,

@@ -22232,7 +22232,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 
@@ -22246,8 +22245,18 @@ __WEBPACK_IMPORTED_MODULE_1_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2_vue_
   },
 
 
-  props: ['song']
+  props: ['song'],
 
+  data: function data() {
+    return {
+      title: this.song.title,
+      artist: this.song.artist,
+      album: this.song.album,
+      artwork: this.song.artwork,
+      video: this.song.video,
+      genre: this.song.genre
+    };
+  }
 });
 
 /***/ }),
@@ -42228,7 +42237,43 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('h1', [_vm._v("SONG INFO")])
+  return _c('div', {
+    staticClass: "SongInfo"
+  }, [_c('div', {
+    staticClass: "col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 background"
+  }, [_c('div', {
+    staticClass: "col-md-12"
+  }, [_c('div', {
+    staticClass: "youtube"
+  }, [_c('youtube', {
+    attrs: {
+      "video-id": _vm.song.video
+    },
+    on: {
+      "ready": _vm.ready,
+      "playing": _vm.playing
+    }
+  })], 1), _vm._v(" "), _c('div', {
+    staticClass: "line-break"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "col-md-12"
+  }, [_c('div', {
+    staticClass: "col-md-4"
+  }, [_c('img', {
+    attrs: {
+      "src": _vm.song.artwork
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-8"
+  }, [_c('p', {
+    staticClass: "info"
+  }, [_vm._v(" " + _vm._s(_vm.song.title) + " ")]), _vm._v(" "), _c('p', {
+    staticClass: "info"
+  }, [_vm._v(" " + _vm._s(_vm.song.artist) + " ")]), _vm._v(" "), _c('p', {
+    staticClass: "info"
+  }, [_vm._v(" " + _vm._s(_vm.song.album) + " ")]), _vm._v(" "), _c('p', {
+    staticClass: "info"
+  }, [_vm._v(" " + _vm._s(_vm.song.genre) + " ")])])])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
