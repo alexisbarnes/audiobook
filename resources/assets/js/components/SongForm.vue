@@ -3,7 +3,6 @@
     <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 background">
       <!---TITLE-->
       <div class="col-md-12">
-        <a href="#" class="back"><img src="/images/back-arrow.png" /><span class="backTxt">back</span></a>
         <h1 class="formTitle">add new song</h1>
       </div>
       <!---FORM-->

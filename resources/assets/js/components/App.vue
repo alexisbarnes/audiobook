@@ -10,9 +10,9 @@
       <div class="row">
         <!---DESKTOP ADD SONG BTN-->
         <div class="hidden-xs hidden-sm col-md-2 col-lg-2 add">
-          <div v-if="showForm">
+          <div v-if="showForm || showCancel">
             <!--CANCEL BUTTON FOR SONGFORM-->
-            <a href="#" @click="cancel()"><div class="close"><p class="x-style">x</p></div></a>
+            <a href="#" @click="close()"><div class="exit"><p class="x-style">x</p></div></a>
           </div>
           <div v-else>
             <button type="button" class="btn btn-primary" @click="songForm()" :songForm="songForm">Add Song</button>
@@ -27,7 +27,7 @@
             <SongForm @created="fetch"></SongForm>
           </div>
           <div v-else>
-              <SongInfo @closed="closed" v-if="activeSong" :song="activeSong"></SongInfo>
+              <SongInfo v-if="activeSong" :song="activeSong"></SongInfo>
               <div v-show="!activeSong">
                 <AllSongs v-for="(song, index) in songs" :song="song" @selected="selectedSong"></AllSongs>
               </div>
@@ -78,7 +78,8 @@
       return {
         songs: [],
         showForm: false,
-        activeSong: null
+        activeSong: null,
+        showCancel: false
       }
     },
 
@@ -89,23 +90,22 @@
     methods: {
       songForm () {
         this.showForm = true;
-        this.creating = true;
-        this.show.creating = true;
-        creating: true;
+        // this.creating = true;
+        // this.show.creating = true;
+        // creating: true;
         console.log('songForm');
 
       },
 
       selectedSong(s) {
-        this.activeSong = s
+        this.activeSong = s;
+        this.showCancel = true;
       },
 
-      closed () {
-        this.activeItem = null
-      },
-
-      cancel () {
+      close () {
         this.showForm = false;
+        this.activeSong = null;
+        this.showCancel = false;
       },
 
       fetch () {
@@ -197,7 +197,7 @@ input::placeholder {
   font-style: italic;
 }
 
-.close {
+.exit {
   width: 40px;
   height: 40px;
   border-radius: 50%;

@@ -1,7 +1,5 @@
 <template>
   <div>
-      <!--CANCEL BUTTON FOR SONGFORM-->
-      <a href="#" @click="cancel()"><div class="delete"><p class="x-style">x</p></div></a>
 
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
 
@@ -11,7 +9,7 @@
             <div class="songInfo" :style="{'background-image': 'url(' + song.artwork + ')'}">
               <div class="opacity">
                 <div class="songFormat">
-                  <span class="infoTitle">title:</span><p class="info"> {{ song.title }} </p> <a href="#" @click.prevent="remove"><div class="delete"><p class="x-style">x</p></div></a><br>
+                  <span class="infoTitle">title:</span><p class="info"> {{ song.title }} </p><br>
                   <span class="infoTitle">artist:</span><p class="info"> {{ song.artist }} </p><br>
                   <span class="infoTitle">album:</span><p class="info"> {{ song.album }}</p><br>
                   <span class="infoTitle">genre:</span><p class="info"> {{ song.genre }}</p>
