@@ -34,16 +34,16 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
           <!---CREATE FORM-->
-          <div v-show="showForm">
+          <div v-if="showForm">
             <SongForm @created="fetch"></SongForm>
           </div>
-          <!-- <div v-else> -->
+          <div v-else>
             <!--DISPLAY OF ALL SONGS-->
             <div class="SongsList" v-show="songs.length > 0">
               <AllSongs v-for="(song, index) in songs" :key="index" :song="song" @updated="update" @deleted="remove(index)"></AllSongs>
             </div>
             <p v-show="songs.length === 0">There is no music in the database.</p>
-          <!-- </div> -->
+          </div>
         </div>
       </div>
 

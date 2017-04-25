@@ -1,7 +1,7 @@
 <template>
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
       <div class="Song">
-        <div class="songInfo" :style="{'background-image': 'url(' + song.artwork + ')'}">
+        <div class="songInfo" :style="{'background-image': 'url(' + song.artwork + ')'}" @click="showSelected()">
           <div class="opacity">
             <div class="songFormat">
               <span class="infoTitle">title:</span><p class="info"> {{ song.title }} </p> <a href="#" @click.prevent="remove"><div class="delete"><p class="x-style">x</p></div></a><br>
@@ -12,13 +12,22 @@
           </div>
         </div>
       </div>
+
+      <div v-show="currentSong">
+        <SongInfo></SongInfo>
+      </div>
     </div>
 
 </template>
 
 <script>
 import axios from 'axios';
+import SongInfo from './SongInfo';
 export default {
+  components: {
+    SongInfo
+  },
+
   name: 'AllSongs',
 
   mounted () {
@@ -26,7 +35,7 @@ export default {
   },
 
   props: [
-    'song'
+    'song',
   ],
 
   data() {
@@ -36,8 +45,13 @@ export default {
       album: this.song.album,
       artwork: this.song.artwork,
       video: this.song.video,
-      genre: this.song.genre
+      genre: this.song.genre,
+      currentSong: false
     }
+  },
+  methods: {
+  showSelected () {
+    this.currentSong = true;
   },
 
   remove () {
@@ -52,6 +66,7 @@ export default {
       });
   }
 
+  }
 }
 </script>
 

@@ -1,17 +1,15 @@
 <template>
-  <div class="SongInfo">
-    <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 background">
+  <!-- <div class="SongInfo">
+    <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 background"> -->
       <!---YOUTUBE VIDEO-->
       <!--https://github.com/kaorun343/vue-youtube-embed-->
 
-      <div class="col-md-12">
+      <!-- <div class="col-md-12">
         <div class="youtube">
           <youtube :video-id="song.video" @ready="ready" @playing="playing"></youtube>
         </div>
 
         <div class="line-break"></div>
-
-        <!--SONG INFO-->
         <div class="col-md-12">
           <div class="col-md-4">
             <img :src="song.artwork" />
@@ -25,16 +23,10 @@
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
       </div>
-    </div>
-  </div>
+    </div> -->
+    <h1>SONG INFO</h1>
+    
 </template>
 
 <script>
