@@ -1,6 +1,6 @@
 <template>
   <div class="SongForm">
-    <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 background">
+    <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 background">
       <!-- <div class="live" v-show="!editing"> -->
       <!---TITLE-->
       <div class="col-md-12">

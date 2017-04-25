@@ -109,6 +109,10 @@ body {
   background-color: rgba(204, 204, 204, 0.6);
 }
 
+.opacity:hover {
+  opacity: 0;
+}
+
 .infoTitle {
   color: #000;
   font-size: 30px;
