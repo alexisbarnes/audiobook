@@ -10,7 +10,13 @@
       <div class="row">
         <!---DESKTOP ADD SONG BTN-->
         <div class="hidden-xs hidden-sm col-md-2 col-lg-2 add">
-          <button type="button" class="btn btn-primary">Add Song</button>
+          <div v-if="showForm">
+            <!--CANCEL BUTTON FOR SONGFORM-->
+            <button type="button" class="btn btn-primary" @click="songForm()" :songForm="songForm">Cancel</button>
+          </div>
+          <div v-else>
+            <button type="button" class="btn btn-primary" @click="songForm()" :songForm="songForm">Add Song</button>
+          </div>
         </div>
         <!--SEARCH-->
         <!-- <div class="col-md-4 col-lg-4 search">
@@ -27,15 +33,18 @@
 
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <!---CREATE FORM-->
+          <div v-show="showForm">
+            <SongForm @created="fetch"></SongForm>
+          </div>
+          <!-- <div v-else> -->
             <!--DISPLAY OF ALL SONGS-->
             <div class="SongsList" v-show="songs.length > 0">
-              <AllSongs v-for="(song, index) in songs" :key="index" :song="song"></AllSongs>
+              <AllSongs v-for="(song, index) in songs" :key="index" :song="song" @updated="update" @deleted="remove(index)"></AllSongs>
             </div>
             <p v-show="songs.length === 0">There is no music in the database.</p>
-            <!-- <SongForm></SongForm> -->
+          <!-- </div> -->
         </div>
-
-        <!-- <SongInfo></SongInfo> -->
       </div>
 
       <!--Add New button for mobile-->
@@ -76,7 +85,8 @@
 
     data () {
       return {
-        songs: []
+        songs: [],
+        showForm: false
       }
     },
 
@@ -85,6 +95,15 @@
     },
 
     methods: {
+      songForm () {
+        this.showForm = true;
+        this.creating = true;
+        this.show.creating = true;
+        creating: true;
+        console.log('songForm');
+        console.log('this.creating = ' + this.creating);
+      },
+
       fetch () {
         console.log('App -> fetch');
         axios.get('/songs')
@@ -97,6 +116,18 @@
             console.log('App -> fetch error');
             //show error
           });
+      },
+
+      update (data) {
+        var i = this.songs.indexOf(data.song);
+        for (var d in data) {
+          this.songs[i][d] = data[d];
+        }
+      },
+
+      remove (i) {
+        console.log(`App -> remove ID: ${i}`);
+        this.songs.splice(i, 1);
       }
     }
   }

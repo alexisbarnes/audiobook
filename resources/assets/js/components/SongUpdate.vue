@@ -86,6 +86,34 @@ export default {
 
   mounted () {
     console.log('SongUpdate -> mounted')
+  },
+
+  methods: {
+    update () {
+      console.log('Song -> update');
+      axios.put(`/songs/${this.song.id}`, {
+        title: this.title,
+        artist: this.artist,
+        album: this.album,
+        genre: this.genre,
+        artwork: this.artwork,
+        video: this.video
+      })
+      .then((response) => {
+        console.log('Song -> update success');
+        this.$emit('updated', {
+          title: this.title,
+          artist: this.artist,
+          album: this.album,
+          genre: this.genre,
+          artwork: this.artwork,
+          video: this.video
+        });
+      })
+      .catch((error) => {
+        console.log('Song -> save error');
+      });
+    }
   }
 
 }

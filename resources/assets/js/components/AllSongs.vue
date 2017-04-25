@@ -9,10 +9,6 @@
               <span class="infoTitle">album:</span><p class="info"> {{ song.album }}</p><br>
               <span class="infoTitle">genre:</span><p class="info"> {{ song.genre }}</p>
             </div>
-
-            <div class="buttons">
-
-            </div>
           </div>
         </div>
       </div>

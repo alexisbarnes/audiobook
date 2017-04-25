@@ -21768,10 +21768,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -21885,6 +21881,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -21905,7 +21910,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   data: function data() {
     return {
-      songs: []
+      songs: [],
+      showForm: false
     };
   },
   mounted: function mounted() {
@@ -21914,6 +21920,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
   methods: {
+    songForm: function songForm() {
+      this.showForm = true;
+      this.creating = true;
+      this.show.creating = true;
+      creating: true;
+      console.log('songForm');
+      console.log('this.creating = ' + this.creating);
+    },
     fetch: function fetch() {
       var _this = this;
 
@@ -21926,6 +21940,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         console.log('App -> fetch error');
         //show error
       });
+    },
+    update: function update(data) {
+      var i = this.songs.indexOf(data.song);
+      for (var d in data) {
+        this.songs[i][d] = data[d];
+      }
+    },
+    remove: function remove(i) {
+      console.log('App -> remove ID: ' + i);
+      this.songs.splice(i, 1);
     }
   }
 });
@@ -22309,7 +22333,37 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   mounted: function mounted() {
     console.log('SongUpdate -> mounted');
+  },
+
+
+  methods: {
+    update: function update() {
+      var _this = this;
+
+      console.log('Song -> update');
+      __WEBPACK_IMPORTED_MODULE_0_axios___default.a.put('/songs/' + this.song.id, {
+        title: this.title,
+        artist: this.artist,
+        album: this.album,
+        genre: this.genre,
+        artwork: this.artwork,
+        video: this.video
+      }).then(function (response) {
+        console.log('Song -> update success');
+        _this.$emit('updated', {
+          title: _this.title,
+          artist: _this.artist,
+          album: _this.album,
+          genre: _this.genre,
+          artwork: _this.artwork,
+          video: _this.video
+        });
+      }).catch(function (error) {
+        console.log('Song -> save error');
+      });
+    }
   }
+
 });
 
 /***/ }),
@@ -42607,11 +42661,48 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container-fluid"
   }, [_c('Navigation')], 1), _vm._v(" "), _c('div', {
     staticClass: "container"
-  }, [_vm._m(0), _vm._v(" "), _c('div', {
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "hidden-xs hidden-sm col-md-2 col-lg-2 add"
+  }, [(_vm.showForm) ? _c('div', [_c('button', {
+    staticClass: "btn btn-primary",
+    attrs: {
+      "type": "button",
+      "songForm": _vm.songForm
+    },
+    on: {
+      "click": function($event) {
+        _vm.songForm()
+      }
+    }
+  }, [_vm._v("Cancel")])]) : _c('div', [_c('button', {
+    staticClass: "btn btn-primary",
+    attrs: {
+      "type": "button",
+      "songForm": _vm.songForm
+    },
+    on: {
+      "click": function($event) {
+        _vm.songForm()
+      }
+    }
+  }, [_vm._v("Add Song")])])])]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('div', {
     staticClass: "col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
   }, [_c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.showForm),
+      expression: "showForm"
+    }]
+  }, [_c('SongForm', {
+    on: {
+      "created": _vm.fetch
+    }
+  })], 1), _vm._v(" "), _c('div', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -42624,6 +42715,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       key: index,
       attrs: {
         "song": song
+      },
+      on: {
+        "updated": _vm.update,
+        "deleted": function($event) {
+          _vm.remove(index)
+        }
       }
     })
   })), _vm._v(" "), _c('p', {
@@ -42633,21 +42730,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.songs.length === 0),
       expression: "songs.length === 0"
     }]
-  }, [_vm._v("There is no music in the database.")])])]), _vm._v(" "), _vm._m(1)]), _vm._v(" "), _c('div', {
+  }, [_vm._v("There is no music in the database.")])])]), _vm._v(" "), _vm._m(0)]), _vm._v(" "), _c('div', {
     staticClass: "container-fluid"
   }, [_c('FootNav')], 1)])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "hidden-xs hidden-sm col-md-2 col-lg-2 add"
-  }, [_c('button', {
-    staticClass: "btn btn-primary",
-    attrs: {
-      "type": "button"
-    }
-  }, [_vm._v("Add Song")])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "visible-xs visible-sm"
   }, [_c('div', {
@@ -42710,9 +42796,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "infoTitle"
   }, [_vm._v("genre:")]), _c('p', {
     staticClass: "info"
-  }, [_vm._v(" " + _vm._s(_vm.song.genre))])]), _vm._v(" "), _c('div', {
-    staticClass: "buttons"
-  })])])])])
+  }, [_vm._v(" " + _vm._s(_vm.song.genre))])])])])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "delete"
