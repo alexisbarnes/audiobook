@@ -1,6 +1,16 @@
 <template>
   <div>
+    <div v-if="currentSong">
+      <!--CANCEL BUTTON FOR SONGFORM-->
+      <a href="#" @click="cancel()"><div class="delete"><p class="x-style">x</p></div></a>
+    </div>
+
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+      <div v-if="currentSong">
+        <SongInfo :song="song"></SongInfo>
+      </div>
+
+      <div v-else>
       <div class="Song">
         <a href="#" @click="showSelected()">
           <div class="songInfo" :style="{'background-image': 'url(' + song.artwork + ')'}">
@@ -16,10 +26,9 @@
         </a>
       </div>
     </div>
-
-    <div v-show="currentSong">
-      <SongInfo :song="song"></SongInfo>
     </div>
+
+
   </div>
 </template>
 
@@ -55,6 +64,10 @@ export default {
   methods: {
   showSelected () {
     this.currentSong = true;
+  },
+
+  cancel () {
+    this.currentSong = false;
   },
 
   remove () {

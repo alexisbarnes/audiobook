@@ -38,12 +38,16 @@
             <SongForm @created="fetch"></SongForm>
           </div>
           <div v-else>
+
             <!--DISPLAY OF ALL SONGS-->
-            <div class="SongsList" v-show="songs.length > 0">
-              <AllSongs v-for="(song, index) in songs" :key="index" :song="song" @updated="update" @deleted="remove(index)"></AllSongs>
-            </div>
-            <p v-show="songs.length === 0">There is no music in the database.</p>
+
+                <div class="SongsList" v-show="songs.length > 0">
+                  <AllSongs v-for="(song, index) in songs" :key="index" :song="song" @updated="update" @deleted="remove(index)"></AllSongs>
+                </div>
+                <p v-show="songs.length === 0">There is no music in the database.</p>
+
           </div>
+
         </div>
       </div>
 
@@ -86,7 +90,8 @@
     data () {
       return {
         songs: [],
-        showForm: false
+        showForm: false,
+        hideList: true
       }
     },
 
@@ -102,6 +107,10 @@
         creating: true;
         console.log('songForm');
 
+      },
+
+      hideAll () {
+        this.hideList = false
       },
 
       cancel () {

@@ -21815,6 +21815,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -21847,6 +21856,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   methods: {
     showSelected: function showSelected() {
       this.currentSong = true;
+    },
+    cancel: function cancel() {
+      this.currentSong = false;
     },
     remove: function remove() {
       var _this = this;
@@ -21949,6 +21961,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -21970,7 +21986,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   data: function data() {
     return {
       songs: [],
-      showForm: false
+      showForm: false,
+      hideList: true
     };
   },
   mounted: function mounted() {
@@ -21985,6 +22002,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       this.show.creating = true;
       creating: true;
       console.log('songForm');
+    },
+    hideAll: function hideAll() {
+      this.hideList = false;
     },
     cancel: function cancel() {
       this.showForm = false;
@@ -42821,9 +42841,22 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('div', {
+  return _c('div', [(_vm.currentSong) ? _c('div', [_c('a', {
+    attrs: {
+      "href": "#"
+    },
+    on: {
+      "click": function($event) {
+        _vm.cancel()
+      }
+    }
+  }, [_vm._m(0)])]) : _vm._e(), _vm._v(" "), _c('div', {
     staticClass: "col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
-  }, [_c('div', {
+  }, [(_vm.currentSong) ? _c('div', [_c('SongInfo', {
+    attrs: {
+      "song": _vm.song
+    }
+  })], 1) : _c('div', [_c('div', {
     staticClass: "Song"
   }, [_c('a', {
     attrs: {
@@ -42857,7 +42890,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.remove($event)
       }
     }
-  }, [_vm._m(0)]), _c('br'), _vm._v(" "), _c('span', {
+  }, [_c('div', {
+    staticClass: "delete"
+  }, [_c('p', {
+    staticClass: "x-style"
+  }, [_vm._v("x")])])]), _c('br'), _vm._v(" "), _c('span', {
     staticClass: "infoTitle"
   }, [_vm._v("artist:")]), _c('p', {
     staticClass: "info"
@@ -42869,18 +42906,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "infoTitle"
   }, [_vm._v("genre:")]), _c('p', {
     staticClass: "info"
-  }, [_vm._v(" " + _vm._s(_vm.song.genre))])])])])])])]), _vm._v(" "), _c('div', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: (_vm.currentSong),
-      expression: "currentSong"
-    }]
-  }, [_c('SongInfo', {
-    attrs: {
-      "song": _vm.song
-    }
-  })], 1)])
+  }, [_vm._v(" " + _vm._s(_vm.song.genre))])])])])])])])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "delete"
