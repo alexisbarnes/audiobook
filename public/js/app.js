@@ -21812,6 +21812,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -21823,7 +21825,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   name: 'AllSongs',
 
   mounted: function mounted() {
-    console.log('AllSongs -> mounted');
+    // console.log('AllSongs -> mounted')
   },
 
 
@@ -21982,7 +21984,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       this.show.creating = true;
       creating: true;
       console.log('songForm');
-      console.log('this.creating = ' + this.creating);
     },
     cancel: function cancel() {
       this.showForm = false;
@@ -22036,7 +22037,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   name: 'FootNav',
   mounted: function mounted() {
-    console.log('FootNav -> mounted');
+    // console.log('FootNav -> mounted')
   }
 });
 
@@ -22084,7 +22085,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   name: 'Navigation',
 
   mounted: function mounted() {
-    console.log('Navigation -> mounted');
+    // console.log('Navigation -> mounted')
   }
 });
 
@@ -22270,11 +22271,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
 
 __WEBPACK_IMPORTED_MODULE_1_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2_vue_youtube_embed___default.a);
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'SongInfo',
 
@@ -42782,16 +42785,20 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
   }, [_c('div', {
     staticClass: "Song"
-  }, [_c('div', {
-    staticClass: "songInfo",
-    style: ({
-      'background-image': 'url(' + _vm.song.artwork + ')'
-    }),
+  }, [_c('a', {
+    attrs: {
+      "href": "#"
+    },
     on: {
       "click": function($event) {
         _vm.showSelected()
       }
     }
+  }, [_c('div', {
+    staticClass: "songInfo",
+    style: ({
+      'background-image': 'url(' + _vm.song.artwork + ')'
+    })
   }, [_c('div', {
     staticClass: "opacity"
   }, [_c('div', {
@@ -42822,7 +42829,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "infoTitle"
   }, [_vm._v("genre:")]), _c('p', {
     staticClass: "info"
-  }, [_vm._v(" " + _vm._s(_vm.song.genre))])])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v(" " + _vm._s(_vm.song.genre))])])])])])]), _vm._v(" "), _c('div', {
     directives: [{
       name: "show",
       rawName: "v-show",

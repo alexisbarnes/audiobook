@@ -34,7 +34,7 @@ export default {
   name: 'Navigation',
 
   mounted () {
-    console.log('Navigation -> mounted')
+    // console.log('Navigation -> mounted')
   }
 }
 

@@ -1,16 +1,18 @@
 <template>
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
       <div class="Song">
-        <div class="songInfo" :style="{'background-image': 'url(' + song.artwork + ')'}" @click="showSelected()">
-          <div class="opacity">
-            <div class="songFormat">
-              <span class="infoTitle">title:</span><p class="info"> {{ song.title }} </p> <a href="#" @click.prevent="remove"><div class="delete"><p class="x-style">x</p></div></a><br>
-              <span class="infoTitle">artist:</span><p class="info"> {{ song.artist }} </p><br>
-              <span class="infoTitle">album:</span><p class="info"> {{ song.album }}</p><br>
-              <span class="infoTitle">genre:</span><p class="info"> {{ song.genre }}</p>
+        <a href="#" @click="showSelected()">
+          <div class="songInfo" :style="{'background-image': 'url(' + song.artwork + ')'}">
+            <div class="opacity">
+              <div class="songFormat">
+                <span class="infoTitle">title:</span><p class="info"> {{ song.title }} </p> <a href="#" @click.prevent="remove"><div class="delete"><p class="x-style">x</p></div></a><br>
+                <span class="infoTitle">artist:</span><p class="info"> {{ song.artist }} </p><br>
+                <span class="infoTitle">album:</span><p class="info"> {{ song.album }}</p><br>
+                <span class="infoTitle">genre:</span><p class="info"> {{ song.genre }}</p>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
 
       <div v-show="currentSong">
@@ -31,11 +33,11 @@ export default {
   name: 'AllSongs',
 
   mounted () {
-    console.log('AllSongs -> mounted')
+    // console.log('AllSongs -> mounted')
   },
 
   props: [
-    'song',
+    'song'
   ],
 
   data () {

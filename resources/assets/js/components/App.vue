@@ -101,7 +101,7 @@
         this.show.creating = true;
         creating: true;
         console.log('songForm');
-        console.log('this.creating = ' + this.creating);
+
       },
 
       cancel () {

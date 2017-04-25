@@ -13,7 +13,7 @@ export default {
 
   name: 'FootNav',
   mounted () {
-    console.log('FootNav -> mounted')
+    // console.log('FootNav -> mounted')
   }
 
 }
