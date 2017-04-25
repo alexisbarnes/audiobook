@@ -21814,6 +21814,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -22241,6 +22242,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_youtube_embed__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_youtube_embed___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vue_youtube_embed__);
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -24896,7 +24904,7 @@ if (typeof jQuery === 'undefined') {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\nbody[data-v-241a684a] {\n  font-family: 'Open Sans', sans-serif;\n}\n.background[data-v-241a684a] {\n  background-color: #F4EDE6;\n  border-radius: 25px;\n  height: 575px;\n  margin: 20px;\n}\n.formTitle[data-v-241a684a] {\n  font-family: 'Abril Fatface', cursive;\n  font-size: 50px;\n  text-align: center;\n  color: #000;\n}\n.back[data-v-241a684a] {\n  display: inline-block;\n  float: right;\n  margin-top: 37px;\n}\na[data-v-241a684a] {\n  color: #000 !important;\n  font-size: 20px;\n}\na[data-v-241a684a]:hover {\n  color: #A6130F !important;\n  text-decoration: none\n}\n.back img[data-v-241a684a] {\n  height: 28px;\n  width: auto;\n}\n.backTxt[data-v-241a684a] {\n  margin: 5px;\n}\n\n/*INPUT FORM*/\n.form-group[data-v-241a684a] {\n  margin: 24px;\n}\n.form-control[data-v-241a684a]:focus {\n  border-color: #000;\n}\ninput[data-v-241a684a]::-webkit-input-placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\ninput[data-v-241a684a]:-ms-input-placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\ninput[data-v-241a684a]::placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\n\n/*BTN STYLES*/\n.create[data-v-241a684a] {\n  margin-right: 25px;\n  font-size: 40px;\n  padding: 3px 58px;\n  border-radius: 9px;\n}\n\n\n", ""]);
+exports.push([module.i, "\nbody[data-v-241a684a] {\n  font-family: 'Open Sans', sans-serif;\n}\n.background[data-v-241a684a] {\n  background-color: #F4EDE6;\n  border-radius: 25px;\n  height: 750px;\n  margin: 20px;\n}\n.formTitle[data-v-241a684a] {\n  font-family: 'Abril Fatface', cursive;\n  font-size: 50px;\n  text-align: center;\n  color: #000;\n}\n.back[data-v-241a684a] {\n  display: inline-block;\n  float: right;\n  margin-top: 37px;\n}\na[data-v-241a684a] {\n  color: #000 !important;\n  font-size: 20px;\n}\na[data-v-241a684a]:hover {\n  color: #A6130F !important;\n  text-decoration: none\n}\n.back img[data-v-241a684a] {\n  height: 28px;\n  width: auto;\n}\n.backTxt[data-v-241a684a] {\n  margin: 5px;\n}\n\n/*INPUT FORM*/\n.form-group[data-v-241a684a] {\n  margin: 24px;\n}\n.form-control[data-v-241a684a]:focus {\n  border-color: #000;\n}\ninput[data-v-241a684a]::-webkit-input-placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\ninput[data-v-241a684a]:-ms-input-placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\ninput[data-v-241a684a]::placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\n\n/*IMG*/\n.coverArt[data-v-241a684a] {\n  height: 300px;\n  width: auto;\n}\n\n/*BTN STYLES*/\n.create[data-v-241a684a] {\n  margin-right: 25px;\n  font-size: 40px;\n  padding: 3px 58px;\n  border-radius: 9px;\n}\n\n\n", ""]);
 
 /***/ }),
 /* 45 */
@@ -42268,11 +42276,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "SongInfo"
   }, [_c('div', {
-    staticClass: "col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 background"
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 background"
+  }, [_c('div', {
+    staticClass: "row"
   }, [_c('div', {
     staticClass: "col-md-12"
   }, [_c('div', {
-    staticClass: "youtube"
+    staticClass: "youtube video"
   }, [_c('youtube', {
     attrs: {
       "video-id": _vm.song.video
@@ -42281,13 +42293,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "ready": _vm.ready,
       "playing": _vm.playing
     }
-  })], 1), _vm._v(" "), _c('div', {
+  })], 1)])]), _vm._v(" "), _c('div', {
     staticClass: "line-break"
   }), _vm._v(" "), _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
     staticClass: "col-md-12"
   }, [_c('div', {
     staticClass: "col-md-4"
   }, [_c('img', {
+    staticClass: "coverArt",
     attrs: {
       "src": _vm.song.artwork
     }
@@ -42301,7 +42316,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "info"
   }, [_vm._v(" " + _vm._s(_vm.song.album) + " ")]), _vm._v(" "), _c('p', {
     staticClass: "info"
-  }, [_vm._v(" " + _vm._s(_vm.song.genre) + " ")])])])])])])
+  }, [_vm._v(" " + _vm._s(_vm.song.genre) + " ")])])])])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -42806,7 +42821,7 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  return _c('div', [_c('div', {
     staticClass: "col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
   }, [_c('div', {
     staticClass: "Song"
@@ -42854,7 +42869,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "infoTitle"
   }, [_vm._v("genre:")]), _c('p', {
     staticClass: "info"
-  }, [_vm._v(" " + _vm._s(_vm.song.genre))])])])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v(" " + _vm._s(_vm.song.genre))])])])])])])]), _vm._v(" "), _c('div', {
     directives: [{
       name: "show",
       rawName: "v-show",

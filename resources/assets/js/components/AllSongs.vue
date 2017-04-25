@@ -1,4 +1,5 @@
 <template>
+  <div>
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
       <div class="Song">
         <a href="#" @click="showSelected()">
@@ -14,12 +15,12 @@
           </div>
         </a>
       </div>
-
-      <div v-show="currentSong">
-        <SongInfo :song="song"></SongInfo>
-      </div>
     </div>
 
+    <div v-show="currentSong">
+      <SongInfo :song="song"></SongInfo>
+    </div>
+  </div>
 </template>
 
 <script>

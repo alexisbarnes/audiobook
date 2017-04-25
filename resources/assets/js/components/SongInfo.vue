@@ -1,29 +1,36 @@
 <template>
   <div class="SongInfo">
-    <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 background">
-      <!---YOUTUBE VIDEO-->
-      <!--https://github.com/kaorun343/vue-youtube-embed-->
-      <div class="col-md-12">
-        <div class="youtube">
-          <youtube :video-id="song.video" @ready="ready" @playing="playing"></youtube>
-        </div>
-
-        <div class="line-break"></div>
-
-        <!--BOTTOM OF FORUM-->
-        <div class="col-md-12">
-          <div class="col-md-4">
-            <img :src="song.artwork" />
-          </div>
-
-          <div class="col-md-8">
-            <p class="info"> {{ song.title }} </p>
-            <p class="info"> {{ song.artist }} </p>
-            <p class="info"> {{ song.album }} </p>
-            <p class="info"> {{ song.genre }} </p>
-          </div>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 background">
+        <!---YOUTUBE VIDEO-->
+        <!--https://github.com/kaorun343/vue-youtube-embed-->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="youtube video">
+              <youtube :video-id="song.video" @ready="ready" @playing="playing"></youtube>
+            </div>
         </div>
       </div>
+
+          <div class="line-break"></div>
+
+          <!--BOTTOM OF FORUM-->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="col-md-4">
+                  <img :src="song.artwork" class="coverArt"/>
+                </div>
+
+                <div class="col-md-8">
+                  <p class="info"> {{ song.title }} </p>
+                  <p class="info"> {{ song.artist }} </p>
+                  <p class="info"> {{ song.album }} </p>
+                  <p class="info"> {{ song.genre }} </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -95,7 +102,7 @@ body {
 .background {
   background-color: #F4EDE6;
   border-radius: 25px;
-  height: 575px;
+  height: 750px;
   margin: 20px;
 }
 
@@ -143,6 +150,12 @@ a:hover {
 input::placeholder {
   font-family: 'Open Sans', sans-serif;
   font-style: italic;
+}
+
+/*IMG*/
+.coverArt {
+  height: 300px;
+  width: auto;
 }
 
 /*BTN STYLES*/
