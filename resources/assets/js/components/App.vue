@@ -208,8 +208,6 @@ input::placeholder {
   /*cursor: pointer;*/
   box-shadow: 0px 2px 5px #666;
   display: inline-block;
-  margin-top: 10px;
-  float: right;
 }
 
 .x-style {

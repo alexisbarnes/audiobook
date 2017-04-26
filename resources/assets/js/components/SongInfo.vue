@@ -28,6 +28,8 @@
                   <p class="info"> {{ song.artist }} </p>
                   <p class="info"> {{ song.album }} </p>
                   <p class="info"> {{ song.genre }} </p>
+
+                  <button type="button" class="btn btn-danger" @click="" >Delete</button>
                 </div>
 
               </div>
@@ -161,6 +163,21 @@ a:hover {
   font-size: 30px;
 }
 
+/*DELETE BTN*/
+.btn-danger {
+  background-color: #A6130F;
+  border-color: #A6130F;
+  font-size: 20px;
+  padding: 8px 26px;
+  border-radius: 9px;
+  float: right;
+}
+
+.btn-danger:hover {
+  background-color: #450806;
+  border-color: #450806;
+}
+
 /*Video player is responsive for mobile*/
 @media screen and (max-width: 700px) {
   iframe {
@@ -168,30 +185,5 @@ a:hover {
   }
 }
 
-.exit {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #A6130F;
-  /*position: fixed;*/
-  /*bottom: 30px;*/
-  /*right: 30px;*/
-  /*cursor: pointer;*/
-  box-shadow: 0px 2px 5px #666;
-  display: inline-block;
-  margin-top: 10px;
-  float: right;
-}
-
-.x-style {
-  color: #FFF;
-  display: block;
-  text-align: center;
-  padding: 10px;
-  margin: 0;
-  line-height: 17px;
-  font-size: 35px;
-  font-weight: 300;
-}
 
 </style>

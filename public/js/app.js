@@ -22328,6 +22328,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -24965,7 +24967,7 @@ if (typeof jQuery === 'undefined') {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\nbody[data-v-241a684a] {\n  font-family: 'Open Sans', sans-serif;\n}\n.background[data-v-241a684a] {\n  background-color: #F4EDE6;\n  border-radius: 25px;\n  height: 810px;\n  margin: 20px;\n}\na[data-v-241a684a] {\n  color: #000 !important;\n  font-size: 20px;\n}\na[data-v-241a684a]:hover {\n  color: #A6130F !important;\n  text-decoration: none\n}\n/*VIDEO*/\n.video[data-v-241a684a] {\n  margin: 20px 0 0 0;\n  text-align: center;\n}\n\n/*LINE BEAK*/\n.line-break[data-v-241a684a] {\n  border-bottom: 1px solid #ccc;\n  margin: 20px;\n}\n\n/*EDIT*/\n.edit-link[data-v-241a684a] {\n  float: right;\n  padding: 0 18px 0 0;\n}\n\n\n/*IMG*/\n.coverArt[data-v-241a684a] {\n  height: 300px;\n  width: auto;\n}\n.all-info[data-v-241a684a] {\n  padding: 24px 0 0 90px;\n  font-family: 'Open sans', sans-serif;\n  color: #000;\n  font-size: 30px;\n}\n\n/*Video player is responsive for mobile*/\n@media screen and (max-width: 700px) {\niframe[data-v-241a684a] {\n    width: 100%;\n}\n}\n.exit[data-v-241a684a] {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  background: #A6130F;\n  /*position: fixed;*/\n  /*bottom: 30px;*/\n  /*right: 30px;*/\n  /*cursor: pointer;*/\n  box-shadow: 0px 2px 5px #666;\n  display: inline-block;\n  margin-top: 10px;\n  float: right;\n}\n.x-style[data-v-241a684a] {\n  color: #FFF;\n  display: block;\n  text-align: center;\n  padding: 10px;\n  margin: 0;\n  line-height: 17px;\n  font-size: 35px;\n  font-weight: 300;\n}\n\n", ""]);
+exports.push([module.i, "\nbody[data-v-241a684a] {\n  font-family: 'Open Sans', sans-serif;\n}\n.background[data-v-241a684a] {\n  background-color: #F4EDE6;\n  border-radius: 25px;\n  height: 810px;\n  margin: 20px;\n}\na[data-v-241a684a] {\n  color: #000 !important;\n  font-size: 20px;\n}\na[data-v-241a684a]:hover {\n  color: #A6130F !important;\n  text-decoration: none\n}\n/*VIDEO*/\n.video[data-v-241a684a] {\n  margin: 20px 0 0 0;\n  text-align: center;\n}\n\n/*LINE BEAK*/\n.line-break[data-v-241a684a] {\n  border-bottom: 1px solid #ccc;\n  margin: 20px;\n}\n\n/*EDIT*/\n.edit-link[data-v-241a684a] {\n  float: right;\n  padding: 0 18px 0 0;\n}\n\n\n/*IMG*/\n.coverArt[data-v-241a684a] {\n  height: 300px;\n  width: auto;\n}\n.all-info[data-v-241a684a] {\n  padding: 24px 0 0 90px;\n  font-family: 'Open sans', sans-serif;\n  color: #000;\n  font-size: 30px;\n}\n\n/*DELETE BTN*/\n.btn-danger[data-v-241a684a] {\n  background-color: #A6130F;\n  border-color: #A6130F;\n  font-size: 20px;\n  padding: 8px 26px;\n  border-radius: 9px;\n  float: right;\n}\n.btn-danger[data-v-241a684a]:hover {\n  background-color: #450806;\n  border-color: #450806;\n}\n\n/*Video player is responsive for mobile*/\n@media screen and (max-width: 700px) {\niframe[data-v-241a684a] {\n    width: 100%;\n}\n}\n\n\n", ""]);
 
 /***/ }),
 /* 46 */
@@ -24986,7 +24988,7 @@ exports.push([module.i, "\nbody[data-v-35bb1560] {\n  font-family: 'Open Sans', 
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\nbody {\n  background-color: #F9F9F9;\n  font-family: 'Open Sans', sans-serif;\n  color: #000;\n}\n.search {\n  margin: 14px;\n  float: right !important;\n}\n.add {\n  margin: 14px;\n}\n.btn-primary {\n  background-color: #6D8C77 !important;\n  border-color: #6D8C77 !important;\n}\n#floating-button {\n  width: 55px;\n  height: 55px;\n  border-radius: 50%;\n  background: #6D8C77;\n  position: fixed;\n  bottom: 30px;\n  right: 30px;\n  cursor: pointer;\n  box-shadow: 0px 2px 5px #666;\n}\n.plus {\n  color: white;\n  position: absolute;\n  top: 0;\n  display: block;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  text-align: center;\n  padding: 0;\n  margin: 0;\n  line-height: 60px;\n  font-size: 60px;\n  font-weight: 300;\n}\n.form-control:focus {\n  border-color: #000 !important;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.6) !important;\n}\ninput::-webkit-input-placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\ninput:-ms-input-placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\ninput::placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\n.exit {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  background: #A6130F;\n  /*position: fixed;*/\n  /*bottom: 30px;*/\n  /*right: 30px;*/\n  /*cursor: pointer;*/\n  box-shadow: 0px 2px 5px #666;\n  display: inline-block;\n  margin-top: 10px;\n  float: right;\n}\n.x-style {\n  color: #FFF;\n  display: block;\n  text-align: center;\n  padding: 10px;\n  margin: 0;\n  line-height: 17px;\n  font-size: 35px;\n  font-weight: 300;\n}\n", ""]);
+exports.push([module.i, "\nbody {\n  background-color: #F9F9F9;\n  font-family: 'Open Sans', sans-serif;\n  color: #000;\n}\n.search {\n  margin: 14px;\n  float: right !important;\n}\n.add {\n  margin: 14px;\n}\n.btn-primary {\n  background-color: #6D8C77 !important;\n  border-color: #6D8C77 !important;\n}\n#floating-button {\n  width: 55px;\n  height: 55px;\n  border-radius: 50%;\n  background: #6D8C77;\n  position: fixed;\n  bottom: 30px;\n  right: 30px;\n  cursor: pointer;\n  box-shadow: 0px 2px 5px #666;\n}\n.plus {\n  color: white;\n  position: absolute;\n  top: 0;\n  display: block;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  text-align: center;\n  padding: 0;\n  margin: 0;\n  line-height: 60px;\n  font-size: 60px;\n  font-weight: 300;\n}\n.form-control:focus {\n  border-color: #000 !important;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.6) !important;\n}\ninput::-webkit-input-placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\ninput:-ms-input-placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\ninput::placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\n.exit {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  background: #A6130F;\n  /*position: fixed;*/\n  /*bottom: 30px;*/\n  /*right: 30px;*/\n  /*cursor: pointer;*/\n  box-shadow: 0px 2px 5px #666;\n  display: inline-block;\n}\n.x-style {\n  color: #FFF;\n  display: block;\n  text-align: center;\n  padding: 10px;\n  margin: 0;\n  line-height: 17px;\n  font-size: 35px;\n  font-weight: 300;\n}\n", ""]);
 
 /***/ }),
 /* 49 */
@@ -42349,7 +42351,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "info"
   }, [_vm._v(" " + _vm._s(_vm.song.album) + " ")]), _vm._v(" "), _c('p', {
     staticClass: "info"
-  }, [_vm._v(" " + _vm._s(_vm.song.genre) + " ")])])])])])])])
+  }, [_vm._v(" " + _vm._s(_vm.song.genre) + " ")]), _vm._v(" "), _c('button', {
+    staticClass: "btn btn-danger",
+    attrs: {
+      "type": "button"
+    },
+    on: {
+      "click": function($event) {}
+    }
+  }, [_vm._v("Delete")])])])])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
