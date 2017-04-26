@@ -42926,7 +42926,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   })]), _vm._v(" "), _c('a', {
     staticClass: "navbar-brand",
     attrs: {
-      "href": "#"
+      "href": "/"
     }
   }, [_c('img', {
     staticClass: "main-logo",
