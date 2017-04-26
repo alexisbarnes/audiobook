@@ -12,24 +12,24 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i" rel="stylesheet">
 
         <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i" rel="stylesheet">
     </head>
-    <!-- Styles -->
     <style>
     /*GLOBAL STYLES*/
     body {
       font-family: 'Open Sans', sans-serif;
+      background-color: #F9F9F9;
     }
 
     h1 {
@@ -83,6 +83,8 @@
 
     .navbar-default .navbar-nav > li > a {
         color: #000;
+        font-family: 'Abril Fatface', cursive;
+        font-size: 30px;
     }
 
     .navbar-nav > li {
@@ -95,7 +97,8 @@
 
     /*ACTIVE & HOVER A*/
     .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-        background-color: transparent;
+        background: transparent;
+        box-shadow: none;
         color: #A6130F;
     }
 
@@ -431,7 +434,27 @@
       font-size: 45px;
       font-weight: 300;
     }
+    .footer {
+      margin: 40px;
+    }
+
+    .footer p {
+      font-family: 'Open Sans', sans-serif;
+      color: #000;
+      text-align: center;
+    }
+
+    .footer a {
+      text-decoration: underline;
+      color: #000;
+    }
+
+    .footer a:hover {
+      color: #A6130F;
+      cursor: pointer;
+    }
     </style>
+
     <nav class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -670,6 +693,12 @@
 
               </div>
             </div>
+          </div>
+        </div>
+        <!--FOOTER-->
+        <div class="container-fluid">
+          <div class="footer">
+            <p>&copy; <a>Alexis Barnes</a></p>
           </div>
         </div>
 
