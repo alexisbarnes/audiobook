@@ -15,8 +15,14 @@ Route::get('/', function () {
     return view('app');
 });
 
+//style guide
 Route::get('/styles', function (){
   return view ('styles');
+});
+
+//credits
+Route::get('/credits', function () {
+  return view ('credits');
 });
 
 // api routes

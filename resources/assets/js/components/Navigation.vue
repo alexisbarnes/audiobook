@@ -19,7 +19,7 @@
         <li><a href="https://www.github.com/alexisbarnes" target="_blank">github</a></li>
         <li><a href="/styles">style guide</a></li>
         <li><a href="https://alexisbarnes.gitbooks.io/audiobook/" target="_blank">documentation</a></li>
-        <li><a href="#">credits</a></li>
+        <li><a href="/credits">credits</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

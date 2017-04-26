@@ -2,7 +2,7 @@
   <div class="SongInfo">
     <div class="row">
 
-      <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 background">
+      <div class="background">
         <!---YOUTUBE VIDEO-->
         <!--https://github.com/kaorun343/vue-youtube-embed-->
         <div class="row">
@@ -171,6 +171,7 @@ a:hover {
   padding: 8px 26px;
   border-radius: 9px;
   float: right;
+  margin: 0 10px 0 0;
 }
 
 .btn-danger:hover {

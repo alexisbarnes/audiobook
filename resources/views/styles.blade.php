@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>AudioBook</title>
+        <title>Style Guide</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans" rel="stylesheet">
@@ -475,7 +475,7 @@
           <li><a href="https://www.github.com/alexisbarnes" target="_blank">github</a></li>
           <li class="active"><a href="/styles">style guide<span class="sr-only">(current)</span></a></li>
           <li><a href="https://alexisbarnes.gitbooks.io/audiobook/" target="_blank">documentation</a></li>
-          <li><a href="#">credits</a></li>
+          <li><a href="/credits">credits</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
