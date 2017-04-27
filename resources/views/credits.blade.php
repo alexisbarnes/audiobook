@@ -34,6 +34,9 @@
 
     h1 {
       font-size: 60px;
+      font-family: 'Abril fatface', cursive;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
     }
 
     h2 {
@@ -53,7 +56,8 @@
     }
 
     p {
-      font-size: 18px;
+      font-size: 24px;
+      text-align: center;
     }
 
     a {
@@ -166,6 +170,26 @@
       width: auto;
       height: 80px;
     }
+
+    .footer {
+      margin: 40px;
+    }
+
+    .footer p {
+      font-family: 'Open Sans', sans-serif;
+      color: #000;
+      text-align: center;
+    }
+
+    .footer a {
+      text-decoration: underline;
+      color: #000;
+    }
+
+    .footer a:hover {
+      color: #A6130F;
+      cursor: pointer;
+    }
     </style>
     </head>
     <nav class="navbar navbar-default">
@@ -194,7 +218,24 @@
     </div><!-- /.container-fluid -->
   </nav>
     <body>
-      <div id="credits"></div>
+      <div id="credits">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h1>credits</h1>
+              <p><a href="https://github.com/asethwright/" target="_blank" class="credit-link">Seth Wright</a></p>
+              <p><a href="https://codepen.io/simoberny/pen/pJZJQY" target="_blank" class="credit-link">Simoberny</a></p>
+              <p><a href="https://color.adobe.com" target="_blank" class="credit-link">Kolor</a></p><br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="footer">
+          <p>&copy; <a>Alexis Barnes</a></p>
+        </div>
+      </div>
 
       <script>
         window.Laravel = {!! json_encode([
