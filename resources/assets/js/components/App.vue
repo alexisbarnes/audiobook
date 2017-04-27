@@ -35,7 +35,7 @@
             <SongForm @created="fetch"></SongForm>
           </div>
           <div v-else>
-              <SongInfo v-if="activeSong" :song="activeSong"></SongInfo>
+              <SongInfo v-if="activeSong" :song="activeSong" @updated="update" @deleted="deleted"></SongInfo>
               <div v-show="!activeSong">
                 <AllSongs v-for="(song, index) in songs" :song="song" @selected="selectedSong"></AllSongs>
               </div>
@@ -135,11 +135,13 @@
       update (data) {
         var i = this.songs.indexOf(data.song);
         for (var d in data) {
+          if (d === 'song') continue;
           this.songs[i][d] = data[d];
         }
       },
 
-      remove (i) {
+      deleted (data) {
+        var i = this.songs.indexOf(data);
         console.log(`App -> remove ID: ${i}`);
         this.songs.splice(i, 1);
       }

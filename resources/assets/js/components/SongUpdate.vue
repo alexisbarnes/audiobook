@@ -1,10 +1,10 @@
 <template>
   <div class="SongForm">
-    <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 background">
+    <div class="background">
       <!-- <div class="live" v-show="!editing"> -->
       <!---TITLE-->
       <div class="col-md-12">
-        <h1 class="formTitle">{{ song. title }} - {{ song.artist }}</h1>
+        <h1 class="formTitle">{{ song.title }} - {{ song.artist }}</h1>
       </div>
       <!---FORM-->
       <div class="col-md-12">
@@ -72,7 +72,7 @@
           </div>
         </div>
         <div class="col-md-12">
-          <button class="btn btn-primary pull-right create" @click="update()">update</button>
+          <button class="btn btn-primary pull-right update" @click="update()">update</button>
         </div>
       </div>
 
@@ -87,12 +87,23 @@ export default {
   name: 'SongUpdate',
 
   mounted () {
-    console.log('SongUpdate -> mounted')
+    console.log('SongUpdate -> mounted', this.song)
   },
 
   props: [
     'song'
   ],
+
+  data () {
+    return {
+      title: this.song.title,
+      artist: this.song.artist,
+      album: this.song.album,
+      genre: this.song.genre,
+      artwork: this.song.artwork,
+      video: this.song.video
+    }
+  },
 
   methods: {
     update () {
@@ -108,6 +119,7 @@ export default {
       .then((response) => {
         console.log('Song -> update success');
         this.$emit('updated', {
+          song: this.song,
           title: this.title,
           artist: this.artist,
           album: this.album,
@@ -118,14 +130,9 @@ export default {
       })
       .catch((error) => {
         console.log('Song -> save error');
-      });
-    },
-    update (data) {
-      var i = this.songs.indexOf(data.song);
-      for (var d  in data) {
-        this.songs[i][d] = data[d];
-      }
+      })
     }
+
   }
 
 }
@@ -191,11 +198,12 @@ input::placeholder {
 }
 
 /*BTN STYLES*/
-.create {
+.update {
   margin-right: 25px;
   font-size: 40px;
   padding: 3px 58px;
   border-radius: 9px;
+  cursor: pointer;
 }
 
 

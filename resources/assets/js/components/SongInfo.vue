@@ -3,7 +3,7 @@
     <div class="row">
 
       <div v-if="UpdateForm">
-        <SongUpdate :song="song"></SongUpdate>
+        <SongUpdate :song="song" @updated="updated"></SongUpdate>
       </div>
 
       <div v-else>
@@ -63,7 +63,7 @@ export default {
   name: 'SongInfo',
 
   mounted () {
-    console.log('SongInfo -> mounted')
+    console.log('SongInfo -> mounted', this.song)
   },
 
   props: [
@@ -72,12 +72,6 @@ export default {
 
   data () {
     return {
-      title: this.song.title,
-      artist: this.song.artist,
-      album: this.song.album,
-      artwork: this.song.artwork,
-      video: this.song.video,
-      genre: this.song.genre,
       UpdateForm: false
     }
   },
@@ -93,6 +87,10 @@ export default {
 
     playing(player) {
       //The player is playing a video
+    },
+
+    updated (e) {
+      this.$emit('updated', e);
     },
 
     change () {
@@ -112,11 +110,18 @@ export default {
     },
     remove (i) {
       console.log(`App -> remove ID ${i}`);
-      this.songs.splice(i,1);
+      axios.delete(`/songs/${this.song.id}`)
+      .then((response) => {
+        console.log('Song -> update success');
+        this.$emit('deleted', this.song);
+      })
+      .catch((error) => {
+        console.log('Song -> save error');
+      })
+    }
     }
   }
 
-}
 </script>
 
 <style scoped>

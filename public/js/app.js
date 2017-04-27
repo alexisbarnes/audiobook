@@ -22046,10 +22046,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     update: function update(data) {
       var i = this.songs.indexOf(data.song);
       for (var d in data) {
+        if (d === 'song') continue;
         this.songs[i][d] = data[d];
       }
     },
-    remove: function remove(i) {
+    deleted: function deleted(data) {
+      var i = this.songs.indexOf(data);
       console.log('App -> remove ID: ' + i);
       this.songs.splice(i, 1);
     }
@@ -22349,7 +22351,7 @@ __WEBPACK_IMPORTED_MODULE_2_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_3_vue_
   name: 'SongInfo',
 
   mounted: function mounted() {
-    console.log('SongInfo -> mounted');
+    console.log('SongInfo -> mounted', this.song);
   },
 
 
@@ -22357,12 +22359,6 @@ __WEBPACK_IMPORTED_MODULE_2_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_3_vue_
 
   data: function data() {
     return {
-      title: this.song.title,
-      artist: this.song.artist,
-      album: this.song.album,
-      artwork: this.song.artwork,
-      video: this.song.video,
-      genre: this.song.genre,
       UpdateForm: false
     };
   },
@@ -22380,6 +22376,9 @@ __WEBPACK_IMPORTED_MODULE_2_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_3_vue_
     playing: function playing(player) {
       //The player is playing a video
     },
+    updated: function updated(e) {
+      this.$emit('updated', e);
+    },
     change: function change() {
       // when you change the value, the player will also change.
       // If you would like to change `playerVars`, please change it before you change `videoId`.
@@ -22394,11 +22393,17 @@ __WEBPACK_IMPORTED_MODULE_2_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_3_vue_
       this.player.pauseVideo();
     },
     remove: function remove(i) {
+      var _this = this;
+
       console.log('App -> remove ID ' + i);
-      this.songs.splice(i, 1);
+      __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete('/songs/' + this.song.id).then(function (response) {
+        console.log('Song -> update success');
+        _this.$emit('deleted', _this.song);
+      }).catch(function (error) {
+        console.log('Song -> save error');
+      });
     }
   }
-
 });
 
 /***/ }),
@@ -22409,8 +22414,6 @@ __WEBPACK_IMPORTED_MODULE_2_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_3_vue_
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 //
 //
 //
@@ -22500,13 +22503,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   name: 'SongUpdate',
 
   mounted: function mounted() {
-    console.log('SongUpdate -> mounted');
+    console.log('SongUpdate -> mounted', this.song);
   },
 
 
   props: ['song'],
 
-  methods: _defineProperty({
+  data: function data() {
+    return {
+      title: this.song.title,
+      artist: this.song.artist,
+      album: this.song.album,
+      genre: this.song.genre,
+      artwork: this.song.artwork,
+      video: this.song.video
+    };
+  },
+
+
+  methods: {
     update: function update() {
       var _this = this;
 
@@ -22521,6 +22536,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }).then(function (response) {
         console.log('Song -> update success');
         _this.$emit('updated', {
+          song: _this.song,
           title: _this.title,
           artist: _this.artist,
           album: _this.album,
@@ -22532,12 +22548,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         console.log('Song -> save error');
       });
     }
-  }, 'update', function update(data) {
-    var i = this.songs.indexOf(data.song);
-    for (var d in data) {
-      this.songs[i][d] = data[d];
-    }
-  })
+  }
 
 });
 
@@ -24990,7 +25001,7 @@ exports.push([module.i, "\nbody[data-v-241a684a] {\n  font-family: 'Open Sans', 
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\nbody[data-v-35b47436] {\n  font-family: 'Open Sans', sans-serif;\n}\n.background[data-v-35b47436] {\n  background-color: #F4EDE6;\n  border-radius: 25px;\n  height: 575px;\n  margin: 20px;\n}\n.formTitle[data-v-35b47436] {\n  font-family: 'Abril Fatface', cursive;\n  font-size: 50px;\n  text-align: center;\n  color: #000;\n}\n.back[data-v-35b47436] {\n  display: inline-block;\n  float: right;\n  margin-top: 37px;\n}\na[data-v-35b47436] {\n  color: #000 !important;\n  font-size: 20px;\n}\na[data-v-35b47436]:hover {\n  color: #A6130F !important;\n  text-decoration: none\n}\n.back img[data-v-35b47436] {\n  height: 28px;\n  width: auto;\n}\n.backTxt[data-v-35b47436] {\n  margin: 5px;\n}\n\n/*INPUT FORM*/\n.form-group[data-v-35b47436] {\n  margin: 24px;\n}\n.form-control[data-v-35b47436]:focus {\n  border-color: #000;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.6);\n}\ninput[data-v-35b47436]::-webkit-input-placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\ninput[data-v-35b47436]:-ms-input-placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\ninput[data-v-35b47436]::placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\n\n/*BTN STYLES*/\n.create[data-v-35b47436] {\n  margin-right: 25px;\n  font-size: 40px;\n  padding: 3px 58px;\n  border-radius: 9px;\n}\n\n\n", ""]);
+exports.push([module.i, "\nbody[data-v-35b47436] {\n  font-family: 'Open Sans', sans-serif;\n}\n.background[data-v-35b47436] {\n  background-color: #F4EDE6;\n  border-radius: 25px;\n  height: 575px;\n  margin: 20px;\n}\n.formTitle[data-v-35b47436] {\n  font-family: 'Abril Fatface', cursive;\n  font-size: 50px;\n  text-align: center;\n  color: #000;\n}\n.back[data-v-35b47436] {\n  display: inline-block;\n  float: right;\n  margin-top: 37px;\n}\na[data-v-35b47436] {\n  color: #000 !important;\n  font-size: 20px;\n}\na[data-v-35b47436]:hover {\n  color: #A6130F !important;\n  text-decoration: none\n}\n.back img[data-v-35b47436] {\n  height: 28px;\n  width: auto;\n}\n.backTxt[data-v-35b47436] {\n  margin: 5px;\n}\n\n/*INPUT FORM*/\n.form-group[data-v-35b47436] {\n  margin: 24px;\n}\n.form-control[data-v-35b47436]:focus {\n  border-color: #000;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.6);\n}\ninput[data-v-35b47436]::-webkit-input-placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\ninput[data-v-35b47436]:-ms-input-placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\ninput[data-v-35b47436]::placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\n\n/*BTN STYLES*/\n.update[data-v-35b47436] {\n  margin-right: 25px;\n  font-size: 40px;\n  padding: 3px 58px;\n  border-radius: 9px;\n  cursor: pointer;\n}\n\n\n", ""]);
 
 /***/ }),
 /* 47 */
@@ -42321,6 +42332,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [(_vm.UpdateForm) ? _c('div', [_c('SongUpdate', {
     attrs: {
       "song": _vm.song
+    },
+    on: {
+      "updated": _vm.updated
     }
   })], 1) : _c('div', [_c('div', {
     staticClass: "background"
@@ -42399,7 +42413,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "SongForm"
   }, [_c('div', {
-    staticClass: "col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 background"
+    staticClass: "background"
   }, [_c('div', {
     staticClass: "col-md-12"
   }, [_c('h1', {
@@ -42552,7 +42566,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   })])]), _vm._v(" "), _c('div', {
     staticClass: "col-md-12"
   }, [_c('button', {
-    staticClass: "btn btn-primary pull-right create",
+    staticClass: "btn btn-primary pull-right update",
     on: {
       "click": function($event) {
         _vm.update()
@@ -42803,6 +42817,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   })], 1) : _c('div', [(_vm.activeSong) ? _c('SongInfo', {
     attrs: {
       "song": _vm.activeSong
+    },
+    on: {
+      "updated": _vm.update,
+      "deleted": _vm.deleted
     }
   }) : _vm._e(), _vm._v(" "), _c('div', {
     directives: [{
