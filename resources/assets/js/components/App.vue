@@ -9,7 +9,7 @@
     <div class="container">
       <div class="row">
         <!---DESKTOP ADD SONG BTN-->
-        <div class="col-md-2 col-lg-2 add">
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 add">
           <div v-if="showForm || showCancel">
             <!--CANCEL BUTTON FOR SONGFORM-->
             <a href="#" @click="close()"><div class="exit"><p class="x-style">x</p></div></a>
@@ -20,6 +20,12 @@
           </div>
           </div>
         </div>
+
+          <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+              <p class="intro-txt">AudioBook is a database that holds the music videos for all of your favorite songs. Here you will be able to add new songs, update the information, and delete them from the databse. To get started, click "Add Song."</p>
+            </div>
+          </div>
       </div>
 
       <div class="row">

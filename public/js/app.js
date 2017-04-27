@@ -21987,6 +21987,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -42774,7 +42780,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "row"
   }, [_c('div', {
-    staticClass: "col-md-2 col-lg-2 add"
+    staticClass: "col-xs-2 col-sm-2 col-md-2 col-lg-2 add"
   }, [(_vm.showForm || _vm.showCancel) ? _c('div', [_c('a', {
     attrs: {
       "href": "#"
@@ -42797,7 +42803,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.songForm()
       }
     }
-  }, [_vm._v("Add Song")])])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("Add Song")])])])]), _vm._v(" "), _vm._m(1)]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('div', {
     staticClass: "col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
@@ -42848,6 +42854,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('p', {
     staticClass: "x-style"
   }, [_vm._v("x")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1"
+  }, [_c('p', {
+    staticClass: "intro-txt"
+  }, [_vm._v("AudioBook is a database that holds the music videos for all of your favorite songs. Here you will be able to add new songs, update the information, and delete them from the databse. To get started, click \"Add Song.\"")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
