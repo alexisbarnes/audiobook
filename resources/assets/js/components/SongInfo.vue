@@ -2,6 +2,11 @@
   <div class="SongInfo">
     <div class="row">
 
+      <div v-if="UpdateForm">
+        <SongUpdate :song="song"></SongUpdate>
+      </div>
+
+      <div v-else>
       <div class="background">
         <!---YOUTUBE VIDEO-->
         <!--https://github.com/kaorun343/vue-youtube-embed-->
@@ -19,17 +24,17 @@
           <!--BOTTOM OF FORUM-->
             <div class="row">
               <div class="col-md-12">
-                <div class="col-md-4">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                   <img :src="song.artwork" class="coverArt"/>
                 </div>
 
-                <div class="col-md-8 all-info">
+                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 all-info">
                   <p class="info"> {{ song.title }} </p>
                   <p class="info"> {{ song.artist }} </p>
                   <p class="info"> {{ song.album }} </p>
                   <p class="info"> {{ song.genre }} </p>
 
-                  <button type="button" class="btn btn-danger" @click="" >Delete</button>
+                  <button type="button" class="btn btn-danger" @click="remove()" >Delete</button>
                 </div>
 
               </div>
@@ -37,6 +42,7 @@
 
           </div>
 
+          </div>
         </div>
       </div>
     </div>
@@ -103,6 +109,10 @@ export default {
 
     pause () {
       this.player.pauseVideo()
+    },
+    remove (i) {
+      console.log(`App -> remove ID ${i}`);
+      this.songs.splice(i,1);
     }
   }
 
@@ -179,10 +189,40 @@ a:hover {
   border-color: #450806;
 }
 
+/*MEDIA QUERIES*/
+@media screen and (max-width: 991px) {
+  .coverArt {
+    height: 220px;
+    width: auto;
+  }
+
+  .all-info {
+    padding: 0;
+    font-size: 22px;
+  }
+
+
+}
+
 /*Video player is responsive for mobile*/
 @media screen and (max-width: 700px) {
   iframe {
-    width: 100%;
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .coverArt {
+    height: 118px;
+    width: auto;
+  }
+
+  .background {
+    height: 875px;
+  }
+
+  .all-info {
+    padding: 20px;
   }
 }
 

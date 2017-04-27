@@ -21983,6 +21983,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -22330,6 +22334,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -22387,6 +22397,10 @@ __WEBPACK_IMPORTED_MODULE_2_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_3_vue_
     },
     pause: function pause() {
       this.player.pauseVideo();
+    },
+    remove: function remove(i) {
+      console.log('App -> remove ID ' + i);
+      this.songs.splice(i, 1);
     }
   }
 
@@ -22400,6 +22414,8 @@ __WEBPACK_IMPORTED_MODULE_2_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_3_vue_
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -22495,7 +22511,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   props: ['song'],
 
-  methods: {
+  methods: _defineProperty({
     update: function update() {
       var _this = this;
 
@@ -22521,7 +22537,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         console.log('Song -> save error');
       });
     }
-  }
+  }, 'update', function update(data) {
+    var i = this.songs.indexOf(data.song);
+    for (var d in data) {
+      this.songs[i][d] = data[d];
+    }
+  })
 
 });
 
@@ -24967,7 +24988,7 @@ if (typeof jQuery === 'undefined') {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\nbody[data-v-241a684a] {\n  font-family: 'Open Sans', sans-serif;\n}\n.background[data-v-241a684a] {\n  background-color: #F4EDE6;\n  border-radius: 25px;\n  height: 810px;\n  margin: 20px;\n}\na[data-v-241a684a] {\n  color: #000 !important;\n  font-size: 20px;\n}\na[data-v-241a684a]:hover {\n  color: #A6130F !important;\n  text-decoration: none\n}\n/*VIDEO*/\n.video[data-v-241a684a] {\n  margin: 20px 0 0 0;\n  text-align: center;\n}\n\n/*LINE BEAK*/\n.line-break[data-v-241a684a] {\n  border-bottom: 1px solid #ccc;\n  margin: 20px;\n}\n\n/*EDIT*/\n.edit-link[data-v-241a684a] {\n  float: right;\n  padding: 0 18px 0 0;\n}\n\n\n/*IMG*/\n.coverArt[data-v-241a684a] {\n  height: 300px;\n  width: auto;\n}\n.all-info[data-v-241a684a] {\n  padding: 24px 0 0 90px;\n  font-family: 'Open sans', sans-serif;\n  color: #000;\n  font-size: 30px;\n}\n\n/*DELETE BTN*/\n.btn-danger[data-v-241a684a] {\n  background-color: #A6130F;\n  border-color: #A6130F;\n  font-size: 20px;\n  padding: 8px 26px;\n  border-radius: 9px;\n  float: right;\n  margin: 0 10px 0 0;\n}\n.btn-danger[data-v-241a684a]:hover {\n  background-color: #450806;\n  border-color: #450806;\n}\n\n/*Video player is responsive for mobile*/\n@media screen and (max-width: 700px) {\niframe[data-v-241a684a] {\n    width: 100%;\n}\n}\n\n\n", ""]);
+exports.push([module.i, "\nbody[data-v-241a684a] {\n  font-family: 'Open Sans', sans-serif;\n}\n.background[data-v-241a684a] {\n  background-color: #F4EDE6;\n  border-radius: 25px;\n  height: 810px;\n  margin: 20px;\n}\na[data-v-241a684a] {\n  color: #000 !important;\n  font-size: 20px;\n}\na[data-v-241a684a]:hover {\n  color: #A6130F !important;\n  text-decoration: none\n}\n/*VIDEO*/\n.video[data-v-241a684a] {\n  margin: 20px 0 0 0;\n  text-align: center;\n}\n\n/*LINE BEAK*/\n.line-break[data-v-241a684a] {\n  border-bottom: 1px solid #ccc;\n  margin: 20px;\n}\n\n/*EDIT*/\n.edit-link[data-v-241a684a] {\n  float: right;\n  padding: 0 18px 0 0;\n}\n\n\n/*IMG*/\n.coverArt[data-v-241a684a] {\n  height: 300px;\n  width: auto;\n}\n.all-info[data-v-241a684a] {\n  padding: 24px 0 0 90px;\n  font-family: 'Open sans', sans-serif;\n  color: #000;\n  font-size: 30px;\n}\n\n/*DELETE BTN*/\n.btn-danger[data-v-241a684a] {\n  background-color: #A6130F;\n  border-color: #A6130F;\n  font-size: 20px;\n  padding: 8px 26px;\n  border-radius: 9px;\n  float: right;\n  margin: 0 10px 0 0;\n}\n.btn-danger[data-v-241a684a]:hover {\n  background-color: #450806;\n  border-color: #450806;\n}\n\n/*MEDIA QUERIES*/\n@media screen and (max-width: 991px) {\n.coverArt[data-v-241a684a] {\n    height: 220px;\n    width: auto;\n}\n.all-info[data-v-241a684a] {\n    padding: 0;\n    font-size: 22px;\n}\n}\n\n/*Video player is responsive for mobile*/\n@media screen and (max-width: 700px) {\niframe[data-v-241a684a] {\n    width: 100% !important;\n}\n}\n@media screen and (max-width: 400px) {\n.coverArt[data-v-241a684a] {\n    height: 118px;\n    width: auto;\n}\n.background[data-v-241a684a] {\n    height: 875px;\n}\n.all-info[data-v-241a684a] {\n    padding: 20px;\n}\n}\n\n\n", ""]);
 
 /***/ }),
 /* 46 */
@@ -42302,7 +42323,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "SongInfo"
   }, [_c('div', {
     staticClass: "row"
-  }, [_c('div', {
+  }, [(_vm.UpdateForm) ? _c('div', [_c('SongUpdate', {
+    attrs: {
+      "song": _vm.song
+    }
+  })], 1) : _c('div', [_c('div', {
     staticClass: "background"
   }, [_c('div', {
     staticClass: "row"
@@ -42335,14 +42360,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "col-md-12"
   }, [_c('div', {
-    staticClass: "col-md-4"
+    staticClass: "col-xs-12 col-sm-4 col-md-4 col-lg-4"
   }, [_c('img', {
     staticClass: "coverArt",
     attrs: {
       "src": _vm.song.artwork
     }
   })]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-8 all-info"
+    staticClass: "col-xs-12 col-sm-8 col-md-8 col-lg-8 all-info"
   }, [_c('p', {
     staticClass: "info"
   }, [_vm._v(" " + _vm._s(_vm.song.title) + " ")]), _vm._v(" "), _c('p', {
@@ -42357,9 +42382,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "button"
     },
     on: {
-      "click": function($event) {}
+      "click": function($event) {
+        _vm.remove()
+      }
     }
-  }, [_vm._v("Delete")])])])])])])])
+  }, [_vm._v("Delete")])])])])])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -42532,7 +42559,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('button', {
     staticClass: "btn btn-primary pull-right create",
     on: {
-      "click": _vm.update
+      "click": function($event) {
+        _vm.update()
+      }
     }
   }, [_vm._v("update")])])])])])
 },staticRenderFns: []}
@@ -42745,7 +42774,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "row"
   }, [_c('div', {
-    staticClass: "hidden-xs hidden-sm col-md-2 col-lg-2 add"
+    staticClass: "col-md-2 col-lg-2 add"
   }, [(_vm.showForm || _vm.showCancel) ? _c('div', [_c('a', {
     attrs: {
       "href": "#"
@@ -42755,7 +42784,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.close()
       }
     }
-  }, [_vm._m(0)])]) : _c('div', [_c('button', {
+  }, [_vm._m(0)])]) : _c('div', [_c('div', {
+    staticClass: "hidden-xs hidden-sm"
+  }, [_c('button', {
     staticClass: "btn btn-primary",
     attrs: {
       "type": "button",
@@ -42766,7 +42797,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.songForm()
       }
     }
-  }, [_vm._v("Add Song")])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("Add Song")])])])])]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('div', {
     staticClass: "col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
@@ -42794,7 +42825,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "selected": _vm.selectedSong
       }
     })
-  }))], 1)])]), _vm._v(" "), _vm._m(1)]), _vm._v(" "), _c('div', {
+  }))], 1)])]), _vm._v(" "), (!_vm.showCancel) ? _c('div', [_c('div', {
+    staticClass: "visible-xs visible-sm"
+  }, [_c('div', {
+    attrs: {
+      "id": "floating-button",
+      "songForm": _vm.songForm
+    },
+    on: {
+      "click": function($event) {
+        _vm.songForm()
+      }
+    }
+  }, [_c('p', {
+    staticClass: "plus"
+  }, [_vm._v("+")])])])]) : _vm._e()]), _vm._v(" "), _c('div', {
     staticClass: "container-fluid"
   }, [_c('FootNav')], 1)])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -42803,16 +42848,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('p', {
     staticClass: "x-style"
   }, [_vm._v("x")])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "visible-xs visible-sm"
-  }, [_c('div', {
-    attrs: {
-      "id": "floating-button"
-    }
-  }, [_c('p', {
-    staticClass: "plus"
-  }, [_vm._v("+")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {

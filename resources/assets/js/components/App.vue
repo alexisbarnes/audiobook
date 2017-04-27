@@ -9,13 +9,15 @@
     <div class="container">
       <div class="row">
         <!---DESKTOP ADD SONG BTN-->
-        <div class="hidden-xs hidden-sm col-md-2 col-lg-2 add">
+        <div class="col-md-2 col-lg-2 add">
           <div v-if="showForm || showCancel">
             <!--CANCEL BUTTON FOR SONGFORM-->
             <a href="#" @click="close()"><div class="exit"><p class="x-style">x</p></div></a>
           </div>
           <div v-else>
+            <div class="hidden-xs hidden-sm">
             <button type="button" class="btn btn-primary" @click="songForm()" :songForm="songForm">Add Song</button>
+          </div>
           </div>
         </div>
       </div>
@@ -40,11 +42,13 @@
 
       <!--Add New button for mobile-->
       <!--Source: https://codepen.io/simoberny/pen/pJZJQY-->
+      <div v-if="!showCancel">
         <div class="visible-xs visible-sm">
-          <div id="floating-button">
+          <div id="floating-button" @click="songForm()" :songForm="songForm">
             <p class="plus">+</p>
           </div>
         </div>
+      </div>
     </div>
 
 

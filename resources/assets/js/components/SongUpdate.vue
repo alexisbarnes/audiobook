@@ -72,7 +72,7 @@
           </div>
         </div>
         <div class="col-md-12">
-          <button class="btn btn-primary pull-right create" @click="update">update</button>
+          <button class="btn btn-primary pull-right create" @click="update()">update</button>
         </div>
       </div>
 
@@ -119,6 +119,12 @@ export default {
       .catch((error) => {
         console.log('Song -> save error');
       });
+    },
+    update (data) {
+      var i = this.songs.indexOf(data.song);
+      for (var d  in data) {
+        this.songs[i][d] = data[d];
+      }
     }
   }
 
