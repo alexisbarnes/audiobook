@@ -61,18 +61,6 @@ export default {
 
   cancel () {
     this.currentSong = false;
-  },
-
-  remove () {
-    console.log('Song -> remove');
-    axios.delete(`/songs/${this.song.id}`)
-      .then((reponse) => {
-        console.log('Song -> remove success');
-        this.$emit('deleted')
-      })
-      .catch((error) => {
-        console.log('Song -> remove error');
-      });
   }
 
   }
@@ -106,14 +94,14 @@ body {
 
 .infoTitle {
   color: #000;
-  font-size: 30px;
+  font-size: 25px;
   display: inline-block;
   font-weight: bold;
 }
 
 .info {
   color: #000;
-  font-size: 30px;
+  font-size: 20px;
   display: inline-block;
   padding-left: 5px;
 }

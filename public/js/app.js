@@ -21890,17 +21890,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     cancel: function cancel() {
       this.currentSong = false;
-    },
-    remove: function remove() {
-      var _this = this;
-
-      console.log('Song -> remove');
-      __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete('/songs/' + this.song.id).then(function (reponse) {
-        console.log('Song -> remove success');
-        _this.$emit('deleted');
-      }).catch(function (error) {
-        console.log('Song -> remove error');
-      });
     }
   }
 });
@@ -25022,7 +25011,7 @@ exports.push([module.i, "\nbody {\n  background-color: #F9F9F9;\n  font-family: 
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\nbody[data-v-6b45fe78] {\n  font-family: 'Open Sans', sans-serif;\n  color: #000;\n}\n.songInfo[data-v-6b45fe78] {\n  height: 340px;\n  width: auto;\n  background-size: 340px auto;\n  background-repeat: no-repeat;\n  /*opacity: 0.6;*/\n}\n.opacity[data-v-6b45fe78] {\n  height: 340px;\n  width: 340px;\n  background-size: 340px auto;\n  background-color: rgba(204, 204, 204, 0.6);\n}\n.opacity[data-v-6b45fe78]:hover {\n  opacity: 0;\n}\n.infoTitle[data-v-6b45fe78] {\n  color: #000;\n  font-size: 30px;\n  display: inline-block;\n  font-weight: bold;\n}\n.info[data-v-6b45fe78] {\n  color: #000;\n  font-size: 30px;\n  display: inline-block;\n  padding-left: 5px;\n}\n.songFormat[data-v-6b45fe78] {\n  margin: 10px;\n}\n\n/*DELETE BTN*/\n.delete[data-v-6b45fe78] {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  background: #A6130F;\n  /*position: fixed;*/\n  /*bottom: 30px;*/\n  /*right: 30px;*/\n  /*cursor: pointer;*/\n  box-shadow: 0px 2px 5px #666;\n  display: inline-block;\n  margin-top: 10px;\n  float: right;\n}\n.x-style[data-v-6b45fe78] {\n  color: #FFF;\n  display: block;\n  text-align: center;\n  padding: 10px;\n  margin: 0;\n  line-height: 17px;\n  font-size: 35px;\n  font-weight: 300;\n}\n\n/*MEDIA QUERIES*/\n@media only screen and (max-width: 1199px) {\n.songInfo[data-v-6b45fe78] {\n    background-size: 283px auto;\n}\n.opacity[data-v-6b45fe78] {\n    height: 283px;\n    width: 283px;\n}\n.infoTitle[data-v-6b45fe78] {\n    font-size: 18px;\n}\n.info[data-v-6b45fe78] {\n    font-size: 18px;\n}\n}\n\n", ""]);
+exports.push([module.i, "\nbody[data-v-6b45fe78] {\n  font-family: 'Open Sans', sans-serif;\n  color: #000;\n}\n.songInfo[data-v-6b45fe78] {\n  height: 340px;\n  width: auto;\n  background-size: 340px auto;\n  background-repeat: no-repeat;\n  /*opacity: 0.6;*/\n}\n.opacity[data-v-6b45fe78] {\n  height: 340px;\n  width: 340px;\n  background-size: 340px auto;\n  background-color: rgba(204, 204, 204, 0.6);\n}\n.opacity[data-v-6b45fe78]:hover {\n  opacity: 0;\n}\n.infoTitle[data-v-6b45fe78] {\n  color: #000;\n  font-size: 25px;\n  display: inline-block;\n  font-weight: bold;\n}\n.info[data-v-6b45fe78] {\n  color: #000;\n  font-size: 20px;\n  display: inline-block;\n  padding-left: 5px;\n}\n.songFormat[data-v-6b45fe78] {\n  margin: 10px;\n}\n\n/*DELETE BTN*/\n.delete[data-v-6b45fe78] {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  background: #A6130F;\n  /*position: fixed;*/\n  /*bottom: 30px;*/\n  /*right: 30px;*/\n  /*cursor: pointer;*/\n  box-shadow: 0px 2px 5px #666;\n  display: inline-block;\n  margin-top: 10px;\n  float: right;\n}\n.x-style[data-v-6b45fe78] {\n  color: #FFF;\n  display: block;\n  text-align: center;\n  padding: 10px;\n  margin: 0;\n  line-height: 17px;\n  font-size: 35px;\n  font-weight: 300;\n}\n\n/*MEDIA QUERIES*/\n@media only screen and (max-width: 1199px) {\n.songInfo[data-v-6b45fe78] {\n    background-size: 283px auto;\n}\n.opacity[data-v-6b45fe78] {\n    height: 283px;\n    width: 283px;\n}\n.infoTitle[data-v-6b45fe78] {\n    font-size: 18px;\n}\n.info[data-v-6b45fe78] {\n    font-size: 18px;\n}\n}\n\n", ""]);
 
 /***/ }),
 /* 50 */
