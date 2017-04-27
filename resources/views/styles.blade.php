@@ -387,7 +387,7 @@
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      background: #F4EDE6;
+      background: #6D8C77;
       /*position: fixed;*/
       /*bottom: 30px;*/
       /*right: 30px;*/
@@ -399,7 +399,7 @@
     }
 
     .plus-style {
-      color: #000;
+      color: #fff;
       display: block;
       text-align: center;
       padding: 14px;
@@ -452,6 +452,18 @@
     .footer a:hover {
       color: #A6130F;
       cursor: pointer;
+    }
+
+    /*MEDIA QUERIES*/
+    @media screen and (max-width: 400px) {
+      .mobile-create {
+        margin-top: 5px;
+      }
+
+      .delete {
+        margin-top: 5px;
+      }
+
     }
     </style>
 
@@ -681,7 +693,7 @@
           </div>
           <!--ICONS/BUTTONS-->
           <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="col-xs-6 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <h2 class="styleH2">icons + buttons</h2>
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 primary-btns">
                 <button class="btn btn-xs btn-style-primary">X-small</button>
