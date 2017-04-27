@@ -85,7 +85,7 @@ body {
   height: 340px;
   width: 340px;
   background-size: 340px auto;
-  background-color: rgba(204, 204, 204, 0.6);
+  background-color: rgba(204, 204, 204, 0.8);
 }
 
 .opacity:hover {

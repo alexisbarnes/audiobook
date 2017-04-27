@@ -130,6 +130,8 @@
             console.log('App -> fetch error');
             //show error
           });
+          this.showForm = false;
+          this.showCancel = false;
       },
 
       update (data) {
@@ -138,12 +140,16 @@
           if (d === 'song') continue;
           this.songs[i][d] = data[d];
         }
+        this.activeSong = null;
+        this.showCancel = false;
       },
 
       deleted (data) {
         var i = this.songs.indexOf(data);
         console.log(`App -> remove ID: ${i}`);
         this.songs.splice(i, 1);
+        this.activeSong = null;
+        this.showCancel = false;
       }
     }
   }
