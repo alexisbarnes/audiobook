@@ -4,6 +4,8 @@ AudioBook is a music library that allows you to add your favorite songs along wi
 
 You will be able to create, read, update and delete the music in your database.
 
+![Project View](screenshot.png?raw=true)
+
 ##Installation
 
 1. Clone this repo.

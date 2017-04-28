@@ -21982,6 +21982,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -25015,14 +25016,14 @@ exports.push([module.i, "\nbody[data-v-35b47436] {\n  font-family: 'Open Sans', 
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\nbody[data-v-35bb1560] {\n  font-family: 'Open Sans', sans-serif;\n}\n.background[data-v-35bb1560] {\n  background-color: #F4EDE6;\n  border-radius: 25px;\n  height: 575px;\n  margin: 20px;\n}\n.formTitle[data-v-35bb1560] {\n  font-family: 'Abril Fatface', cursive;\n  font-size: 50px;\n  text-align: center;\n  color: #000;\n}\n.back[data-v-35bb1560] {\n  display: inline-block;\n  float: right;\n  margin-top: 37px;\n}\na[data-v-35bb1560] {\n  color: #000 !important;\n  font-size: 20px;\n}\na[data-v-35bb1560]:hover {\n  color: #A6130F !important;\n  text-decoration: none\n}\n.back img[data-v-35bb1560] {\n  height: 28px;\n  width: auto;\n}\n.backTxt[data-v-35bb1560] {\n  margin: 5px;\n}\n\n/*INPUT FORM*/\n.form-group[data-v-35bb1560] {\n  margin: 24px;\n}\n.form-control[data-v-35bb1560]:focus {\n  border-color: #000;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.6);\n}\ninput[data-v-35bb1560]::-webkit-input-placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\ninput[data-v-35bb1560]:-ms-input-placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\ninput[data-v-35bb1560]::placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\n\n/*BTN STYLES*/\n.create[data-v-35bb1560] {\n  margin-right: 25px;\n  font-size: 40px;\n  padding: 3px 58px;\n  border-radius: 9px;\n}\n\n/*MEDIA QUERIES*/\n@media screen and (max-width: 400px) {\n.background[data-v-35bb1560] {\n    height: 660px;\n}\n}\n\n\n", ""]);
+exports.push([module.i, "\nbody[data-v-35bb1560] {\n  font-family: 'Open Sans', sans-serif;\n}\n.background[data-v-35bb1560] {\n  background-color: #F4EDE6;\n  border-radius: 25px;\n  height: 575px;\n  margin: 20px;\n}\n.formTitle[data-v-35bb1560] {\n  font-family: 'Abril Fatface', cursive;\n  font-size: 50px;\n  text-align: center;\n  color: #000;\n}\n.back[data-v-35bb1560] {\n  display: inline-block;\n  float: right;\n  margin-top: 37px;\n}\na[data-v-35bb1560] {\n  color: #000 !important;\n  font-size: 20px;\n}\na[data-v-35bb1560]:hover {\n  color: #A6130F !important;\n  text-decoration: none\n}\n.back img[data-v-35bb1560] {\n  height: 28px;\n  width: auto;\n}\n.backTxt[data-v-35bb1560] {\n  margin: 5px;\n}\n\n/*INPUT FORM*/\n.form-group[data-v-35bb1560] {\n  margin: 24px;\n}\n.form-control[data-v-35bb1560]:focus {\n  border-color: #000;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.6);\n}\ninput[data-v-35bb1560]::-webkit-input-placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\ninput[data-v-35bb1560]:-ms-input-placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\ninput[data-v-35bb1560]::placeholder {\n  font-family: 'Open Sans', sans-serif;\n  font-style: italic;\n}\n\n/*BTN STYLES*/\n.create[data-v-35bb1560] {\n  margin-right: 25px;\n  font-size: 40px;\n  padding: 3px 58px;\n  border-radius: 9px;\n}\n\n/*MEDIA QUERIES*/\n@media screen and (max-width: 400px) {\n.background[data-v-35bb1560] {\n    height: 660px;\n}\n.create[data-v-35bb1560] {\n    margin-right: 18px;\n}\n}\n\n\n", ""]);
 
 /***/ }),
 /* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\nbody {\n  background-color: #F9F9F9;\n  font-family: 'Open Sans', sans-serif;\n  color: #000;\n}\n.search {\n  margin: 14px;\n  float: right !important;\n}\n.add {\n  margin: 14px;\n}\n.btn-primary {\n  background-color: #6D8C77 !important;\n  border-color: #6D8C77 !important;\n}\n#floating-button {\n  width: 55px;\n  height: 55px;\n  border-radius: 50%;\n  background: #6D8C77;\n  position: fixed;\n  bottom: 30px;\n  right: 30px;\n  cursor: pointer;\n  box-shadow: 0px 2px 5px #666;\n}\n.plus {\n  color: white;\n  position: absolute;\n  top: 0;\n  display: block;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  text-align: center;\n  padding: 0;\n  margin: 0;\n  line-height: 60px;\n  font-size: 60px;\n  font-weight: 300;\n}\n.form-control:focus {\n  border-color: #000 !important;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.6) !important;\n}\ninput::-webkit-input-placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\ninput:-ms-input-placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\ninput::placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\n.exit {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  background: #A6130F;\n  /*position: fixed;*/\n  /*bottom: 30px;*/\n  /*right: 30px;*/\n  /*cursor: pointer;*/\n  box-shadow: 0px 2px 5px #666;\n  display: inline-block;\n}\n.x-style {\n  color: #FFF;\n  display: block;\n  text-align: center;\n  padding: 10px;\n  margin: 0;\n  line-height: 17px;\n  font-size: 35px;\n  font-weight: 300;\n}\n", ""]);
+exports.push([module.i, "\nbody {\n  background-color: #F9F9F9;\n  font-family: 'Open Sans', sans-serif;\n  color: #000;\n}\n.search {\n  margin: 14px;\n  float: right !important;\n}\n.add {\n  margin: 14px;\n}\n.btn-primary {\n  background-color: #6D8C77 !important;\n  border-color: #6D8C77 !important;\n}\n#floating-button {\n  width: 55px;\n  height: 55px;\n  border-radius: 50%;\n  background: #6D8C77;\n  position: fixed;\n  bottom: 30px;\n  right: 30px;\n  cursor: pointer;\n  box-shadow: 0px 2px 5px #666;\n}\n.plus {\n  color: white;\n  position: absolute;\n  top: 0;\n  display: block;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  text-align: center;\n  padding: 0;\n  margin: 0;\n  line-height: 60px;\n  font-size: 60px;\n  font-weight: 300;\n}\n.form-control:focus {\n  border-color: #000 !important;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.6) !important;\n}\ninput::-webkit-input-placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\ninput:-ms-input-placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\ninput::placeholder {\n  font-family: 'Open sans' sans-serif;\n  font-style: italic;\n}\n.exit {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  background: #A6130F;\n  /*position: fixed;*/\n  /*bottom: 30px;*/\n  /*right: 30px;*/\n  /*cursor: pointer;*/\n  box-shadow: 0px 2px 5px #666;\n  display: inline-block;\n}\n.x-style {\n  color: #FFF;\n  display: block;\n  text-align: center;\n  padding: 10px;\n  margin: 0;\n  line-height: 17px;\n  font-size: 35px;\n  font-weight: 300;\n}\n.no-songs {\n  text-align: center;\n  color: #000;\n  font-size: 30px;\n}\n", ""]);
 
 /***/ }),
 /* 49 */
@@ -42846,7 +42847,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "selected": _vm.selectedSong
       }
     })
-  }))], 1)])]), _vm._v(" "), (!_vm.showCancel) ? _c('div', [_c('div', {
+  })), _vm._v(" "), _c('p', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.songs.length === 0),
+      expression: "songs.length === 0"
+    }],
+    staticClass: "no-songs"
+  }, [_vm._v("There are no songs in the database. Click \"Add Song\" to get started.")])], 1)])]), _vm._v(" "), (!_vm.showCancel) ? _c('div', [_c('div', {
     staticClass: "visible-xs visible-sm"
   }, [_c('div', {
     attrs: {
@@ -42948,7 +42957,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container-fluid"
   }, [_c('div', {
     staticClass: "footer"
-  }, [_c('p', [_vm._v("© "), _c('a', [_vm._v("Alexis Barnes")])])])])
+  }, [_c('p', [_vm._v("© "), _c('a', {
+    attrs: {
+      "href": "http://alexisbarnes.com",
+      "target": "_blank"
+    }
+  }, [_vm._v("Alexis Barnes")])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {

@@ -39,6 +39,7 @@
               <div v-show="!activeSong">
                 <AllSongs v-for="(song, index) in songs" :song="song" @selected="selectedSong"></AllSongs>
               </div>
+              <p class="no-songs" v-show="songs.length === 0">There are no songs in the database. Click "Add Song" to get started.</p>
 
 
           </div>
@@ -238,5 +239,11 @@ input::placeholder {
   line-height: 17px;
   font-size: 35px;
   font-weight: 300;
+}
+
+.no-songs {
+  text-align: center;
+  color: #000;
+  font-size: 30px;
 }
 </style>

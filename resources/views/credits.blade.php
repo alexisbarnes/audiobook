@@ -225,7 +225,8 @@
               <h1>credits</h1>
               <p><a href="https://github.com/asethwright/" target="_blank" class="credit-link">Seth Wright</a></p>
               <p><a href="https://codepen.io/simoberny/pen/pJZJQY" target="_blank" class="credit-link">Simoberny</a></p>
-              <p><a href="https://color.adobe.com" target="_blank" class="credit-link">Kolor</a></p><br>
+              <p><a href="https://color.adobe.com" target="_blank" class="credit-link">Kolor</a></p>
+              <p><a href="https://github.com/kaorun343/vue-youtube-embed" target="_blank" class="credit-link">Vue YouTube Embed</a></p>
             </div>
           </div>
         </div>

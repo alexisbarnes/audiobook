@@ -202,6 +202,10 @@ input::placeholder {
   .background {
     height: 660px;
   }
+
+  .create {
+    margin-right: 18px;
+  }
 }
 
 

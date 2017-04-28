@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="footer">
-      <p>&copy; <a>Alexis Barnes</a></p>
+      <p>&copy; <a href="http://alexisbarnes.com" target="_blank">Alexis Barnes</a></p>
     </div>
   </div>
 
