@@ -22016,6 +22016,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   methods: {
     songForm: function songForm() {
       this.showForm = true;
+      this.showCancel = true;
       // this.creating = true;
       // this.show.creating = true;
       // creating: true;

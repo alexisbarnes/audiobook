@@ -100,6 +100,7 @@
     methods: {
       songForm () {
         this.showForm = true;
+        this.showCancel = true;
         // this.creating = true;
         // this.show.creating = true;
         // creating: true;
