@@ -11,9 +11,9 @@
         <!---YOUTUBE VIDEO-->
         <!--https://github.com/kaorun343/vue-youtube-embed-->
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 col-xl-10 col-xl-offset-1">
             <div class="youtube video">
-              <youtube :video-id="song.video" @ready="ready" @playing="playing"></youtube>
+              <youtube :video-id="song.video" @ready="ready" @playing="playing" player-width="100%"></youtube>
             </div>
         </div>
       </div>
@@ -23,12 +23,12 @@
 
           <!--BOTTOM OF FORUM-->
             <div class="row">
-              <div class="col-md-12">
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                   <img :src="song.artwork" class="coverArt"/>
                 </div>
 
-                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 all-info">
+                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 all-info">
                   <p class="info"> {{ song.title }} </p>
                   <p class="info"> {{ song.artist }} </p>
                   <p class="info"> {{ song.album }} </p>
@@ -194,27 +194,9 @@ a:hover {
   border-color: #450806;
 }
 
+
+
 /*MEDIA QUERIES*/
-@media screen and (max-width: 991px) {
-  .coverArt {
-    height: 220px;
-    width: auto;
-  }
-
-  .all-info {
-    padding: 0;
-    font-size: 22px;
-  }
-
-
-}
-
-/*Video player is responsive for mobile*/
-@media screen and (max-width: 700px) {
-  iframe {
-    width: 100% !important;
-  }
-}
 
 @media screen and (max-width: 400px) {
   .coverArt {
@@ -223,11 +205,29 @@ a:hover {
   }
 
   .background {
-    height: 875px;
+    height: 1000px;
   }
 
   .all-info {
     padding: 20px;
+  }
+}
+
+/*Video player is responsive for mobile*/
+@media screen and (max-width: 700px) {
+  iframe {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .coverArt {
+    height: 220px;
+    width: auto;
+  }
+  .all-info {
+    padding: 0;
+    font-size: 22px;
   }
 }
 

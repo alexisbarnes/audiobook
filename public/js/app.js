@@ -25000,7 +25000,7 @@ if (typeof jQuery === 'undefined') {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\nbody[data-v-241a684a] {\n  font-family: 'Open Sans', sans-serif;\n}\n.background[data-v-241a684a] {\n  background-color: #F4EDE6;\n  border-radius: 25px;\n  height: 810px;\n  margin: 20px;\n}\na[data-v-241a684a] {\n  color: #000 !important;\n  font-size: 20px;\n}\na[data-v-241a684a]:hover {\n  color: #A6130F !important;\n  text-decoration: none\n}\n/*VIDEO*/\n.video[data-v-241a684a] {\n  margin: 20px 0 0 0;\n  text-align: center;\n}\n\n/*LINE BEAK*/\n.line-break[data-v-241a684a] {\n  border-bottom: 1px solid #ccc;\n  margin: 20px;\n}\n\n/*EDIT*/\n.edit-link[data-v-241a684a] {\n  float: right;\n  padding: 0 18px 0 0;\n}\n\n\n/*IMG*/\n.coverArt[data-v-241a684a] {\n  height: 300px;\n  width: auto;\n}\n.all-info[data-v-241a684a] {\n  padding: 24px 0 0 90px;\n  font-family: 'Open sans', sans-serif;\n  color: #000;\n  font-size: 30px;\n}\n\n/*DELETE BTN*/\n.btn-danger[data-v-241a684a] {\n  background-color: #A6130F;\n  border-color: #A6130F;\n  font-size: 20px;\n  padding: 8px 26px;\n  border-radius: 9px;\n  float: right;\n  margin: 0 10px 0 0;\n}\n.btn-danger[data-v-241a684a]:hover {\n  background-color: #450806;\n  border-color: #450806;\n}\n\n/*MEDIA QUERIES*/\n@media screen and (max-width: 991px) {\n.coverArt[data-v-241a684a] {\n    height: 220px;\n    width: auto;\n}\n.all-info[data-v-241a684a] {\n    padding: 0;\n    font-size: 22px;\n}\n}\n\n/*Video player is responsive for mobile*/\n@media screen and (max-width: 700px) {\niframe[data-v-241a684a] {\n    width: 100% !important;\n}\n}\n@media screen and (max-width: 400px) {\n.coverArt[data-v-241a684a] {\n    height: 118px;\n    width: auto;\n}\n.background[data-v-241a684a] {\n    height: 875px;\n}\n.all-info[data-v-241a684a] {\n    padding: 20px;\n}\n}\n\n\n", ""]);
+exports.push([module.i, "\nbody[data-v-241a684a] {\n  font-family: 'Open Sans', sans-serif;\n}\n.background[data-v-241a684a] {\n  background-color: #F4EDE6;\n  border-radius: 25px;\n  height: 810px;\n  margin: 20px;\n}\na[data-v-241a684a] {\n  color: #000 !important;\n  font-size: 20px;\n}\na[data-v-241a684a]:hover {\n  color: #A6130F !important;\n  text-decoration: none\n}\n/*VIDEO*/\n.video[data-v-241a684a] {\n  margin: 20px 0 0 0;\n  text-align: center;\n}\n\n/*LINE BEAK*/\n.line-break[data-v-241a684a] {\n  border-bottom: 1px solid #ccc;\n  margin: 20px;\n}\n\n/*EDIT*/\n.edit-link[data-v-241a684a] {\n  float: right;\n  padding: 0 18px 0 0;\n}\n\n\n/*IMG*/\n.coverArt[data-v-241a684a] {\n  height: 300px;\n  width: auto;\n}\n.all-info[data-v-241a684a] {\n  padding: 24px 0 0 90px;\n  font-family: 'Open sans', sans-serif;\n  color: #000;\n  font-size: 30px;\n}\n\n/*DELETE BTN*/\n.btn-danger[data-v-241a684a] {\n  background-color: #A6130F;\n  border-color: #A6130F;\n  font-size: 20px;\n  padding: 8px 26px;\n  border-radius: 9px;\n  float: right;\n  margin: 0 10px 0 0;\n}\n.btn-danger[data-v-241a684a]:hover {\n  background-color: #450806;\n  border-color: #450806;\n}\n\n\n\n/*MEDIA QUERIES*/\n@media screen and (max-width: 400px) {\n.coverArt[data-v-241a684a] {\n    height: 118px;\n    width: auto;\n}\n.background[data-v-241a684a] {\n    height: 1000px;\n}\n.all-info[data-v-241a684a] {\n    padding: 20px;\n}\n}\n\n/*Video player is responsive for mobile*/\n@media screen and (max-width: 700px) {\niframe[data-v-241a684a] {\n    width: 100%;\n}\n}\n@media screen and (max-width: 991px) {\n.coverArt[data-v-241a684a] {\n    height: 220px;\n    width: auto;\n}\n.all-info[data-v-241a684a] {\n    padding: 0;\n    font-size: 22px;\n}\n}\n\n\n", ""]);
 
 /***/ }),
 /* 46 */
@@ -42347,12 +42347,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "row"
   }, [_c('div', {
-    staticClass: "col-md-12"
+    staticClass: "col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 col-xl-10 col-xl-offset-1"
   }, [_c('div', {
     staticClass: "youtube video"
   }, [_c('youtube', {
     attrs: {
-      "video-id": _vm.song.video
+      "video-id": _vm.song.video,
+      "player-width": "100%"
     },
     on: {
       "ready": _vm.ready,
@@ -42373,16 +42374,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("edit")]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('div', {
-    staticClass: "col-md-12"
+    staticClass: "col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
   }, [_c('div', {
-    staticClass: "col-xs-12 col-sm-4 col-md-4 col-lg-4"
+    staticClass: "col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"
   }, [_c('img', {
     staticClass: "coverArt",
     attrs: {
       "src": _vm.song.artwork
     }
   })]), _vm._v(" "), _c('div', {
-    staticClass: "col-xs-12 col-sm-8 col-md-8 col-lg-8 all-info"
+    staticClass: "col-xs-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 all-info"
   }, [_c('p', {
     staticClass: "info"
   }, [_vm._v(" " + _vm._s(_vm.song.title) + " ")]), _vm._v(" "), _c('p', {
