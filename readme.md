@@ -6,7 +6,7 @@ You will be able to create, read, update and delete the music in your database.
 
 ![Project View](screenshot.png?raw=true)
 
-##Installation
+## Installation
 
 1. Clone this repo.
 2. Download [MAMP](http://www.mamp.info/en/downloads).
