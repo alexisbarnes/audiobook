@@ -198,6 +198,24 @@ a:hover {
 
 /*MEDIA QUERIES*/
 
+@media screen and (max-width: 991px) {
+  .coverArt {
+    height: 220px;
+    width: auto;
+  }
+  .all-info {
+    padding: 0;
+    font-size: 22px;
+  }
+}
+
+/*Video player is responsive for mobile*/
+@media screen and (max-width: 700px) {
+  iframe {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .coverArt {
     height: 118px;
@@ -210,24 +228,6 @@ a:hover {
 
   .all-info {
     padding: 20px;
-  }
-}
-
-/*Video player is responsive for mobile*/
-@media screen and (max-width: 700px) {
-  iframe {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .coverArt {
-    height: 220px;
-    width: auto;
-  }
-  .all-info {
-    padding: 0;
-    font-size: 22px;
   }
 }
 

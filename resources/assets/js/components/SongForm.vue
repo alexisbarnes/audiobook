@@ -197,5 +197,12 @@ input::placeholder {
   border-radius: 9px;
 }
 
+/*MEDIA QUERIES*/
+@media screen and (max-width: 400px) {
+  .background {
+    height: 660px;
+  }
+}
+
 
 </style>
